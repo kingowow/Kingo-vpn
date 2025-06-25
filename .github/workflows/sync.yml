@@ -3,7 +3,7 @@ name: Merge VPN Configs
 on:
   schedule:
     - cron: '0 */6 * * *'   # اجرا هر 6 ساعت
-  workflow_dispatch:         # امکان اجرای دستی
+  workflow_dispatch:         # اجرا به صورت دستی
 
 jobs:
   merge:
@@ -15,20 +15,23 @@ jobs:
 
     - name: Download and merge configs
       run: |
-        echo "# VPN Configs - Updated on $(date)" > merged_config.txt
+        echo "# Merged VPN Config - Updated on $(date -u)" > merged_config.txt
         echo "" >> merged_config.txt
 
-        # لیست منابع
+        echo "## Source 1: Kolandone" >> merged_config.txt
         curl -s https://raw.githubusercontent.com/Kolandone/v2raycollector/main/config_lite.txt >> merged_config.txt
         echo -e "\n\n" >> merged_config.txt
 
+        echo "## Source 2: coldwater-10" >> merged_config.txt
         curl -s https://raw.githubusercontent.com/coldwater-10/V2Hub5/main/Split/Normal/shadowsocks >> merged_config.txt
         echo -e "\n\n" >> merged_config.txt
 
     - name: Commit and push if changed
+      env:
+        PAT_TOKEN: ${{ secrets.PAT_TOKEN }}
       run: |
         git config --global user.name "github-actions"
         git config --global user.email "github-actions@github.com"
         git add merged_config.txt
-        git commit -m "Auto update merged_config.txt" || echo "No changes"
-        git push
+        git commit -m "Auto update merged_config.txt from sources" || echo "No changes to commit"
+        git push https://x-access-token:${PAT_TOKEN}@github.com/kingowow/Kingo-vpn.git HEAD:main
