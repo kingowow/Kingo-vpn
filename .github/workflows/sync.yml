@@ -1,27 +1,24 @@
 name: Merge VPN Configs
 
-# به workflow اجازه می‌ده فایل‌ها رو بنویسه
 permissions:
   contents: write
 
 on:
   schedule:
-    - cron: '0 */6 * * *'   # اجرا هر 6 ساعت
-  workflow_dispatch:         # اجرا دستی
+    - cron: '0 */6 * * *'
+  workflow_dispatch:
 
 jobs:
   merge:
     runs-on: ubuntu-latest
 
     steps:
-    # 1. Checkout با PAT و بدون persist-credentials
-    - name: Checkout this repo with PAT
+    - name: Checkout with PAT
       uses: actions/checkout@v3
       with:
         token: ${{ secrets.PAT_TOKEN }}
         persist-credentials: false
 
-    # 2. دانلود و ترکیب فایل‌ها
     - name: Download and merge configs
       run: |
         echo "# Merged VPN Config - Updated on $(date -u)" > merged_config.txt
@@ -35,12 +32,14 @@ jobs:
         curl -s https://raw.githubusercontent.com/coldwater-10/V2Hub5/main/Split/Normal/shadowsocks >> merged_config.txt
         echo -e "\n\n" >> merged_config.txt
 
-    # 3. Commit و Push
     - name: Commit and push changes
       env:
         PAT_TOKEN: ${{ secrets.PAT_TOKEN }}
       run: |
         git config user.name "GitHub Actions"
         git config user.email "actions@github.com"
+
+        git remote set-url origin https://x-access-token:${PAT_TOKEN}@github.com/kingowow/Kingo-vpn.git
+
         git add merged_config.txt
         git diff --cached --quiet || (git commit -m "Auto update merged_config.txt" && git push origin main)
