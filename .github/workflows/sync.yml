@@ -1,26 +1,34 @@
-name: Sync config_lite.txt from upstream
+name: Merge VPN Configs
 
 on:
   schedule:
-    - cron: '0 */6 * * *'  # هر 6 ساعت اجرا می‌شود
-  workflow_dispatch:       # قابلیت اجرای دستی
+    - cron: '0 */6 * * *'   # اجرا هر 6 ساعت
+  workflow_dispatch:         # امکان اجرای دستی
 
 jobs:
-  sync:
+  merge:
     runs-on: ubuntu-latest
 
     steps:
     - name: Checkout this repository
       uses: actions/checkout@v3
 
-    - name: Download config_lite.txt
+    - name: Download and merge configs
       run: |
-        curl -o config_lite.txt https://raw.githubusercontent.com/Kolandone/v2raycollector/main/config_lite.txt
+        echo "# VPN Configs - Updated on $(date)" > merged_config.txt
+        echo "" >> merged_config.txt
 
-    - name: Commit and push changes
+        # لیست منابع
+        curl -s https://raw.githubusercontent.com/Kolandone/v2raycollector/main/config_lite.txt >> merged_config.txt
+        echo -e "\n\n" >> merged_config.txt
+
+        curl -s https://raw.githubusercontent.com/coldwater-10/V2Hub5/main/Split/Normal/shadowsocks >> merged_config.txt
+        echo -e "\n\n" >> merged_config.txt
+
+    - name: Commit and push if changed
       run: |
         git config --global user.name "github-actions"
         git config --global user.email "github-actions@github.com"
-        git add config_lite.txt
-        git commit -m "Update config_lite.txt from Kolandone" || echo "No changes to commit"
+        git add merged_config.txt
+        git commit -m "Auto update merged_config.txt" || echo "No changes"
         git push
