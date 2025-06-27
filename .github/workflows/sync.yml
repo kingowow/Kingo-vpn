@@ -19,17 +19,25 @@ jobs:
         token: ${{ secrets.PAT_TOKEN }}
         persist-credentials: false
 
-    - name: Download and merge configs
+    - name: Download, process and merge configs
       run: |
         echo "# Merged VPN Config - Updated on $(date -u)" > merged_config.txt
         echo "" >> merged_config.txt
 
-        echo "## Source 1: Kolandone" >> merged_config.txt
-        curl -s https://raw.githubusercontent.com/Kolandone/v2raycollector/main/config_lite.txt >> merged_config.txt
+        echo "## Source 1: Kolandone - config_lite.txt" >> merged_config.txt
+        curl -s https://raw.githubusercontent.com/Kolandone/v2raycollector/main/config_lite.txt | sed 's/@[^ ]*/@kingo_team/g' >> merged_config.txt
         echo -e "\n\n" >> merged_config.txt
 
-        echo "## Source 2: coldwater-10" >> merged_config.txt
-        curl -s https://raw.githubusercontent.com/coldwater-10/V2Hub5/main/Split/Normal/shadowsocks >> merged_config.txt
+        echo "## Source 2: Kolandone - ss.txt (Random 30)" >> merged_config.txt
+        curl -s https://raw.githubusercontent.com/Kolandone/v2raycollector/main/ss.txt | shuf -n 30 | sed 's/@[^ ]*/@kingo_team/g' >> merged_config.txt
+        echo -e "\n\n" >> merged_config.txt
+
+        echo "## Source 3: coldwater-10 - V2Hub5 shadowsocks" >> merged_config.txt
+        curl -s https://raw.githubusercontent.com/coldwater-10/V2Hub5/main/Split/Normal/shadowsocks | sed 's/@[^ ]*/@kingo_team/g' >> merged_config.txt
+        echo -e "\n\n" >> merged_config.txt
+
+        echo "## Source 4: coldwater-10 - V2Hub3 shadowsocks" >> merged_config.txt
+        curl -s https://raw.githubusercontent.com/coldwater-10/V2Hub3/main/Split/Normal/shadowsocks | sed 's/@[^ ]*/@kingo_team/g' >> merged_config.txt
         echo -e "\n\n" >> merged_config.txt
 
     - name: Commit and push changes
