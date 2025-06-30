@@ -40,13 +40,16 @@ jobs:
         curl -s https://raw.githubusercontent.com/coldwater-10/V2Hub3/main/Split/Normal/shadowsocks | shuf -n 30 | sed 's/#.*/#@kingo_team/g' >> merged_config.txt
         echo -e "\n\n" >> merged_config.txt
 
+        echo "## Source 5: kobabi - sub.txt (Random 30)" >> merged_config.txt
+        curl -s https://raw.githubusercontent.com/liketolivefree/kobabi/main/sub.txt | shuf -n 30 | sed 's/#.*/#@kingo_team/g' >> merged_config.txt
+        echo -e "\n\n" >> merged_config.txt
+
     - name: Commit and push changes
       env:
         PAT_TOKEN: ${{ secrets.PAT_TOKEN }}
       run: |
         git config user.name "GitHub Actions"
         git config user.email "actions@github.com"
-
         git remote set-url origin https://x-access-token:${PAT_TOKEN}@github.com/kingowow/Kingo-vpn.git
 
         git add merged_config.txt
