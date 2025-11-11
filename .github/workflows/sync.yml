@@ -24,8 +24,8 @@ jobs:
         echo "# Merged VPN Config - Updated on $(date -u)" > merged_config.txt
         echo "" >> merged_config.txt
 
-        echo "## Source 1: Kolandone - config_lite.txt (Random 30)" >> merged_config.txt
-        curl -s https://raw.githubusercontent.com/Kolandone/v2raycollector/main/config_lite.txt | shuf -n 30 | sed 's/#.*/#@kingo_team/g' >> merged_config.txt
+        echo "## Source 1: arshiacomplus - config_lite.txt (Random 30)" >> merged_config.txt
+        curl -s https://raw.githubusercontent.com/arshiacomplus/v2rayExtractor/refs/heads/main/hy2.html | shuf -n 30 | sed 's/#.*/#@kingo_team/g' >> merged_config.txt
         echo -e "\n\n" >> merged_config.txt
 
         echo "## Source 2: Kolandone - ss.txt (Random 30)" >> merged_config.txt
