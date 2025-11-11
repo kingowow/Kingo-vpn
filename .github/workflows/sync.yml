@@ -32,12 +32,12 @@ jobs:
         curl -s https://raw.githubusercontent.com/4n0nymou3/multi-proxy-config-fetcher/refs/heads/main/configs/proxy_configs.txt | shuf -n 30 | sed 's/#.*/#@kingo_team/g' >> merged_config.txt
         echo -e "\n\n" >> merged_config.txt
 
-        echo "## Source 3: Argh94-10 - V2Hub5 shadowsocks (Random 30)" >> merged_config.txt
+        echo "## Source 3: Argh94 - V2Hub5 shadowsocks (Random 30)" >> merged_config.txt
         curl -s https://raw.githubusercontent.com/Argh94/V2RayAutoConfig/refs/heads/main/configs/Hysteria2.txt | shuf -n 30 | sed 's/#.*/#@kingo_team/g' >> merged_config.txt
         echo -e "\n\n" >> merged_config.txt
 
-        echo "## Source 4: coldwater-10 - V2Hub3 shadowsocks (Random 30)" >> merged_config.txt
-        curl -s https://raw.githubusercontent.com/coldwater-10/V2Hub3/main/Split/Normal/shadowsocks | shuf -n 30 | sed 's/#.*/#@kingo_team/g' >> merged_config.txt
+        echo "## Source 4: darkvpnapp - V2Hub3 shadowsocks (Random 30)" >> merged_config.txt
+        curl -s https://raw.githubusercontent.com/darkvpnapp/CloudflarePlus/refs/heads/main/proxy | shuf -n 30 | sed 's/#.*/#@kingo_team/g' >> merged_config.txt
         echo -e "\n\n" >> merged_config.txt
 
         echo "## Source 5: kobabi - sub.txt (Random 30)" >> merged_config.txt
