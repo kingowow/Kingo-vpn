@@ -1,134 +1,134 @@
-# Merged VPN Config - Updated on Sat Dec 20 15:12:22 UTC 2025
+# Merged VPN Config - Updated on Sat Dec 20 18:17:24 UTC 2025
 
 ## Source 1: arshiacomplus - config_lite.txt (Random 30)
-hy2://dongtaiwang.com@208.87.243.187:22222/?insecure=1&sni=www.bing.com#@kingo_team
-hy2://dongtaiwang.com@62.210.99.49:40088/?insecure=1&sni=apple.com#@kingo_team
 hy2://17cdeb6c-f046-11ee-bdac-f23c93141fad@c37b0be5n-t3kyo0-t3lvgh-2gok.la.shifen.uk:1743/?sni=c37b0be5-t3kyo0-t3lvgh-2gok.la.shifen.uk#@kingo_team
 hy2://dongtaiwang.com@195.154.206.231:33880/?insecure=1&sni=apple.com#@kingo_team
+hy2://dongtaiwang.com@208.87.243.187:22222/?insecure=1&sni=www.bing.com#@kingo_team
+hy2://dongtaiwang.com@62.210.99.49:40088/?insecure=1&sni=apple.com#@kingo_team
 
 
 
 ## Source 2: 4n0nymou3 - ss.txt (Random 30)
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpBUmd2R1p5d0ErZ2FjZ0dWMjZCdm11MDUrd1ptUlcvaitBZFUrWjhCdDQ0PQ@38.60.250.107:990#@kingo_team
+vless://ee122f13-9b54-49b6-abc5-aa47b464fdb3@173.245.59.217:443?type=ws&encryption=none&host=azizoarjmand.info&path=/yhowcws&security=tls&sni=azizoarjmand.info&allowInsecure=1&fp=chrome#@kingo_team
+vmess://eyJhZGQiOiAiNDUuODkuNTIuMjA3IiwgImFpZCI6ICIwIiwgImFscG4iOiAiIiwgImZwIjogIiIsICJob3N0IjogIiIsICJpZCI6ICJhYzRjMTJjNS00NWYyLTQzOTgtYTcxOC05OTgzOTQxZWRlMmIiLCAibmV0IjogInRjcCIsICJwYXRoIjogIiIsICJwb3J0IjogMzk2NTEsICJwcyI6ICLwn4e58J+HtyAxNiAtIFRSIC0gVk1lc3MgLSAzOTY1MSIsICJzY3kiOiAiYXV0byIsICJzbmkiOiAiIiwgInRscyI6ICIiLCAidHlwZSI6ICJub25lIiwgInYiOiAiMiIsICJuYW1lIjogIj4+QFYyUkFZX1ZNRVNTX2ZyZWU6OlhYOjpYWDo6WFg6OlhYOjpYWDo6WFgifQ==
+vless://65b3cbba-e6ac-485a-9481-976a0415eab9@172.67.218.90:80?type=ws&path=/Fvy0Y7NJ7uucUDha?ed=2560&host=bLue-sNoW-a243.GeleNE5962.wOrKeRS.dEV&encryption=none#@kingo_team
+ss://YWVzLTI1Ni1nY206@Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpMVkJZUmtTa0hsVHFlYlNKckdjMkM3:8388#@kingo_team
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTprMWRCT21PQjRvcWk3VW1wMzdhMWJR@82.38.31.186:8080#@kingo_team
 
 
 
+ss://YWVzLTI1Ni1jZmI6ZGFGWWFncURkQmRBNlZUWA@217.30.10.70:9073#@kingo_team
+
+vless://ef23616d-8a9d-4b22-b2f5-9bda864de179@104.21.51.145:8443?path=/assets?ed=2048&encryption=none&type=ws&host=index.arcane509.workers.dev&fp=chrome&ed=2560&eh=Sec-WebSocket-Protocol&security=tls&sni=INDEX.Arcane509.Workers.DEV&alpn=http/1.1&allowInsecure=1#@kingo_team
+
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpmOGY3YUN6Y1BLYnNGOHAz@192.71.244.150:990#@kingo_team
+
+vless://7bfca5ab-4ef9-4c84-8888-e19d3995a2a0@91.107.157.29:49507?security=none&encryption=none&host=telewebion.com&headerType=http&type=tcp#@kingo_team
+vless://ef23616d-8a9d-4b22-b2f5-9bda864de179@172.67.145.21:443?path=/assets?ed=2048&encryption=none&type=ws&host=index.arcane509.workers.dev&fp=chrome&ed=2560&eh=Sec-WebSocket-Protocol&security=tls&sni=INDEX.Arcane509.Workers.DEV&alpn=http/1.1&allowInsecure=1#@kingo_team
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpmOGY3YUN6Y1BLYnNGOHAz@185.126.237.38:990#@kingo_team
+vless://bf92bdef-ab8d-4481-8798-2d39023357b2@swiss.intfreed.ru:443?security=reality&encryption=none&pbk=JxwG7rAbNCd_C82p9K69AZDWh51fri2nm3wLHHrfyiw&host=/?BIA_TELEGRAM@MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI&headerType=none&fp=qq&type=tcp&flow=xtls-rprx-vision&sni=swiss.video.intfreed.ru&sid=7755e972daf8eec8#@kingo_team
+
+vless://1b2c91ab-f6c9-42f8-b2c6-8de0ac133d63@brenna.ns.cloudflare.com:443?path=/sghiyws&security=tls&encryption=none&insecure=0&type=ws&allowInsecure=0&sni=terazhedi.info#@kingo_team
+
+vless://12345678-1234-1234-1234-123456789123@167.68.42.61:2096?path=/snippets&security=tls&encryption=none&host=vless.hubp.de&fp=chrome&type=ws&sni=vless.hubp.de#@kingo_team
+
+vless://ef23616d-8a9d-4b22-b2f5-9bda864de179@198.41.208.22:2095?path=/ripbdigi5hdb&encryption=none&type=ws&host=index.arcane509.workers.dev&fp=chrome&ed=2560&eh=Sec-WebSocket-Protocol#@kingo_team
 
 
 
+ss://YWVzLTI1Ni1jZmI6ZjhmN2FDemNQS2JzRjhwMw@79.127.227.53:989#@kingo_team
 
-vless://5b48c89b-c27f-4429-953e-7ec0a8902603@deadseectelegram.slimshopboyss.ir:8080?mode=auto&path=/?ed=2048&security=none&encryption=none&host=shop.slimshopboyss.ir&type=xhttp#@kingo_team
-
-
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo2YTg1YjI0OTI4NmE3NGE5@212.224.125.154:57456#@kingo_team
-
-
-vless://48ff2b70-e180-582f-8866-d9a2edeed5f5@51.158.206.93:23576?type=tcp&encryption=none&flow=xtls-rprx-vision&sni=fuck.rkn&fp=chrome&security=reality&pbk=1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s&sid=01#@kingo_team
-
-ss://YWVzLTI1Ni1jZmI6WG44aktkbURNMDBJZU8lIyQjZkpBTXRzRUFFVU9wSC9ZV1l0WXFERm5UMFNW@103.186.155.29:38388#@kingo_team
-
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo0YTJyZml4b3BoZGpmZmE4S1ZBNEFh@45.87.175.181:8080#@kingo_team
-
-
-
-
-
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpmOGY3YUN6Y1BLYnNGOHAz@185.231.233.173:990#@kingo_team
-
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpTd1RTaFhZU1FkNDA0RklTczhORmVK@promo19v.bystrivpn.ru:443#@kingo_team
-
-ss://YWVzLTI1Ni1jZmI6WG44aktkbURNMDBJZU8lIyQjZkpBTXRzRUFFVU9wSC9ZV1l0WXFERm5UMFNW@103.186.155.27:38388#@kingo_team
 
 
 
 
 ## Source 3: Argh94 - V2Hub5 shadowsocks (Random 30)
-hysteria2://Yet-Another-Public-Config-1@206.71.158.37:35200?security=tls&obfs=salamander&obfs-password=Yet-Another-Public-Config-1&insecure=1&sni=YAPC-1.afshin.ir#@kingo_team
-hysteria2://17cdeb6c-f046-11ee-bdac-f23c93141fad@6adab57e-t53wg0-tdvgqe-2gok.la.shifen.uk:1743?security=tls&insecure=0&sni=6adab57e-t53wg0-tdvgqe-2gok.la.shifen.uk#@kingo_team
-hysteria2://b4bd0613-ff7c-4f2f-954d-185915e6ddad@206.71.158.41:35000?security=tls&obfs=salamander&obfs-password=@JavidnamanIran-Javid-SHAH-KingRezaPahlavi&insecure=0&sni=api.kermanshahi.org#@kingo_team
-hy2://17cdeb6c-f046-11ee-bdac-f23c93141fad@c37b0be5n-t3kyo0-t3lvgh-2gok.la.shifen.uk:1743/?sni=c37b0be5-t3kyo0-t3lvgh-2gok.la.shifen.uk#@kingo_team
-hy2://693a3ce6-2188-4fe9-82c0-c5c289532534@hl.dabache.top:20000/#@kingo_team
-hysteria2://72SR90kxWa@91.99.225.11:443?insecure=1&sni=refersion.com&obfs=salamander&obfs-password=Jsbdksj@V2RayyNGvpn$Miracle#@kingo_team
-hysteria2://9772ecf2-6732-4bfb-a8b1-f48af577c76c@113.192.61.19:63979?security=tls&insecure=1&sni=www.bing.com#@kingo_team
-hy2://c232f411-96b5-4b07-b2f7-66a434725ffb@108.165.213.197:23891/?insecure=1&sni=🔒
-hysteria2://2b195c17-5ff5-4b0d-a809-210b92212394@mumbai-3.nezhasu.com:443?insecure=1&sni=mumbai-3.nezhasu.com#@kingo_team
-hysteria2://12929592-a7bd-41eb-ab4d-d804f76c4ff9@5.83.150.108:49187/?sni=imafake.locker&fp=chrome#@kingo_team
-hysteria2://b4bd0613-ff7c-4f2f-954d-185915e6ddad@[2a14:3f87:f001:1a::a]:35000?security=tls&obfs=salamander&obfs-password=@JavidnamanIran-Javid-SHAH-KingRezaPahlavi&insecure=1&sni=jnir.pichondan.com#@kingo_team
-hysteria2://dongtaiwang.com@[2001:bc8:32d7:302::11]:20088?security=tls&insecure=1&sni=apple.com#@kingo_team
-hysteria2://b4bd0613-ff7c-4f2f-954d-185915e6ddad@77.90.41.197:35000?security=tls&obfs=salamander&obfs-password=%40JavidnamanIran-Javid-SHAH-KingRezaPahlavi&insecure=1&sni=api.kermanshahi.org#@kingo_team
-hysteria2://7b5cbc6a-90a1-4b6e-994e-4c198b85f80b@de2.oomz.ru:30000?insecure=1&sni=bing.com#@kingo_team
+hy2://linux.do@[2a01:4f9:4b:f378::1]:13599/?insecure=1&sni=www.bing.com#@kingo_team
+hysteria2://71504eaf-29ac-4190-89d1-dd9ce2c9ee14@[2001:bc8:1640:50eb:dc00:ff:fe57:dd6f]:443?security=tls&obfs=salamander&obfs-password=FnFgQIckcMRtKq7i&insecure=1&mport=50000-60000&sni=Ab.ac#@kingo_team
+hysteria2://c232f411-96b5-4b07-b2f7-66a434725ffb@193.142.59.41:23899?insecure=1&sni=hl01.mistea.top#@kingo_team
+hysteria2://b4bd0613-ff7c-4f2f-954d-185915e6ddad@77.90.41.197:35000?security=tls&obfs=salamander&obfs-password=@JavidnamanIran-Javid-SHAH-KingRezaPahlavi&insecure=1&sni=api.kermanshahi.org#@kingo_team
+hysteria2://linux.do@[2a01:4f9:4b:f378::1]:13599?security=tls&insecure=1&sni=www.bing.com#@kingo_team
+hysteria2://Yet-Another-Public-Config-1@206.71.158.37:35000?security=tls&obfs=salamander&obfs-password=Yet-Another-Public-Config-1&insecure=1&sni=YAPC-1.afshin.ir#@kingo_team
+hysteria2://d0e97ee2-c6de-48f8-bd4a-8e63a9cd9e89@74.117.196.232:57490/?sni=imafake.locker&fp=chrome#@kingo_team
+hysteria2://YW97PxmYTj@91.99.225.11:443?insecure=1&sni=refersion.com&obfs=salamander&obfs-password=Jsbdksj@V2RayyNGvpn$Miracle#@kingo_team
+hy2://b4bd0613-ff7c-4f2f-954d-185915e6ddad@206.71.158.40:35000/?insecure=1&sni=api.kermanshahi.org&obfs=salamander&obfs-password=@JavidnamanIran-Javid-SHAH-KingRezaPahlavi&note=@freeOnlineVPN#@kingo_team
 hysteria2://c3dc8d26-ab2b-11ec-a8bf-f23c91cfbbc9@72b99e3a-t6pb40-t8wh4m-1hpo0.hk1.hyhuawei.com:443?security=tls&insecure=0&sni=72b99e3a-t6pb40-t8wh4m-1hpo0.hk1.hyhuawei.com#@kingo_team
-hysteria2://afc8e385-dc0f-4b26-a5ed-b0fbf08b9df6@tr.xn--9kqx4sc0n.shop:21325?security=tls&insecure=0#@kingo_team
-hysteria2://Yet-Another-Public-Config-1@206.71.158.37:36300?security=tls&obfs=salamander&obfs-password=Yet-Another-Public-Config-1&insecure=1&sni=YAPC-1.afshin.ir#@kingo_team
-hysteria2://80747420-96c4-4a2f-83e6-eea4e46beb09@70.34.215.221:20335?security=tls&obfs=salamander&obfs-password=U1wBrYQyFm&insecure=1&sni=drhystuichdfy.samanidempire.org#@kingo_team
-hysteria2://SNItest@37.18.14.169:443?security=tls&insecure=1&sni=megafon.ru#@kingo_team
-hysteria2://b4bd0613-ff7c-4f2f-954d-185915e6ddad@77.90.41.197:35000?security=tls&obfs=salamander&obfs-password=%40JavidnamanIran-Javid-SHAH-KingRezaPahlavi&insecure=1&sni=api.kermanshahi.org#@kingo_team
-hy2://605d52db-3d29-406f-bf6d-daeb1cd84f09@dg.jgpyjc.top:443/?mport=40000-40050&sni=🔒
-hysteria2://wkAHoJxpH6@91.99.225.11:443?security=tls&obfs=salamander&obfs-password=Jsbdksj@V2RayyNGvpn$Miracle&insecure=1&sni=refersion.com#@kingo_team
-hy2://da9adc6f-03ca-4d32-9e93-7b2bdbc9b00d@tr.xn--gmq00sc0nuve.shop:21105/
-hysteria2://a084933d-0b41-4571-ae0c-7163b8c71ed1@de.eyucdn.xyz:2056?security=tls&insecure=1&sni=de.eyucdn.xyz#@kingo_team
-hy2://dongtaiwang.com@195.154.206.231:33880/?insecure=1&sni=apple.com#@kingo_team
-hysteria2://7b5cbc6a-90a1-4b6e-994e-4c198b85f80b@uk2.oomz.ru:30000?security=tls&insecure=1&sni=bing.com#@kingo_team
-hysteria2://78c2bad7-f5f3-41f2-88cc-81de9d05040b@lsj3.mangshe.xyz:2056?insecure=1&sni=lsj3.mangshe.xyz#@kingo_team
-hysteria2://e8a960d8-14f5-11ec-a0fc-f23c913c8d2b@9c329770-t6ngg0-t6k5ga-1bonh.hk1.hyhuawei.com:443?insecure=0&sni=9c329770-t6ngg0-t6k5ga-1bonh.hk1.hyhuawei.com#@kingo_team
+hysteria2://a698c4a6-c3c9-11ee-9693-f23c91cfbbc9@f643a7e8-t6ngg0-t74ix0-1m0fq.hk1.hyhuawei.com:443?insecure=1&sni=f643a7e8-t6ngg0-t74ix0-1m0fq.hk1.hyhuawei.com#@kingo_team
+hysteria2://bf36227c-0191-11f0-aee1-f23c91cfbbc9@4ec4fca5-t6r5s0-tc2sod-1tizo.hk1.hyhuawei.com:443?security=tls&insecure=0&sni=4ec4fca5-t6r5s0-tc2sod-1tizo.hk1.hyhuawei.com#@kingo_team
+hysteria2://2cUfzeGOZG@91.99.225.11:443?security=tls&obfs=salamander&obfs-password=Jsbdksj@V2RayyNGvpn$Miracle&insecure=1&sni=refersion.com#@kingo_team
+hysteria2://dongtaiwang.com@[2001:bc8:1203:209::60]:33880?security=tls&insecure=1&sni=apple.com#@kingo_team
+hysteria2://05fd3f79-dca0-4358-a803-c8d4711c17a3@lsyd1.lansecs.top:58338?security=tls&insecure=1&sni=lsyd1.lansecs.top#@kingo_team
+hysteria2://c58dvt7oE4@91.99.225.11:443?security=tls&obfs=salamander&obfs-password=Jsbdksj@V2RayyNGvpn$Miracle&insecure=1&sni=refersion.com#@kingo_team
 hysteria2://Telegram-->@Ln2Ray@206.71.158.23:45000?security=tls&obfs=salamander&obfs-password=Telegram-->@Ln2Ray&insecure=1&sni=gavazn.55994421.xyz#@kingo_team
-hysteria2://2b195c17-5ff5-4b0d-a809-210b92212394@falankefu1.nezhasu.com:443?security=tls&insecure=1&mport=50000-65535&sni=falankefu1.nezhasu.com#@kingo_team
+hysteria2://b4bd0613-ff7c-4f2f-954d-185915e6ddad@77.90.41.197:35000?security=tls&obfs=salamander&obfs-password=@JavidnamanIran-Javid-SHAH-KingRezaPahlavi&insecure=1&sni=api.kermanshahi.org#@kingo_team
+hysteria2://8e0f8ef2-5fe3-11ec-a8bf-f23c91cfbbc9@22f48047-t6pb40-tasftf-duku.hk1.hyhuawei.com:443?insecure=0&sni=22f48047-t6pb40-tasftf-duku.hk1.hyhuawei.com#@kingo_team
+hysteria2://9ec830fd-79da-4706-a964-cb227d7198db@135.148.82.248:33333?security=tls&insecure=1#@kingo_team
+hysteria2://Telegram--%3E%40Ln2Ray@[2a14:3f87:f001:9::a]:45000?security=tls&obfs=salamander&obfs-password=Telegram--%3E%40Ln2Ray&insecure=1&sni=gavazn.55994421.xyz#@kingo_team
+hysteria2://693a3ce6-2188-4fe9-82c0-c5c289532534@hl.dabache.top:20000?#@kingo_team
+hysteria2://e8a960d8-14f5-11ec-a0fc-f23c913c8d2b@9c329770-t6ngg0-t6k5ga-1bonh.hk1.hyhuawei.com:443?security=tls&insecure=0&mport=30000-60000&sni=9c329770-t6ngg0-t6k5ga-1bonh.hk1.hyhuawei.com#@kingo_team
+hysteria2://338ce171-d764-4610-8fd5-6688b0d321f0@140.245.68.133:30102?insecure=1#@kingo_team
+hysteria2://17cdeb6c-f046-11ee-bdac-f23c93141fad@6adab57e-t53wg0-tdvgqe-2gok.la.shifen.uk:1743?security=tls&insecure=0&sni=6adab57e-t53wg0-tdvgqe-2gok.la.shifen.uk#@kingo_team
+hysteria2://freehomesvpnchannel3@channel1.saghetalaie.homes:46914?obfs=salamander&obfs-password=&O#@kingo_team
+hy2://b4bd0613-ff7c-4f2f-954d-185915e6ddad@206.71.158.41:35000/?insecure=1&sni=api.kermanshahi.org&obfs=salamander&obfs-password=@JavidnamanIran-Javid-SHAH-KingRezaPahlavi&note=@freeOnlineVPN#@kingo_team
+hysteria2://linux.do@[2a01:4f9:4b:f378::1]:13599?security=tls&insecure=1&sni=www.bing.com#@kingo_team
+hysteria2://c3dc8d26-ab2b-11ec-a8bf-f23c91cfbbc9@72b99e3a-t6pb40-t8wh4m-1hpo0.hk1.hyhuawei.com:443?security=tls&insecure=0&sni=72b99e3a-t6pb40-t8wh4m-1hpo0.hk1.hyhuawei.com#@kingo_team
+hysteria2://dongtaiwang.com@[2001:bc8:32d7:302::11]:20088?security=tls&insecure=1&sni=apple.com#@kingo_team
 
 
 
 ## Source 4: darkvpnapp - V2Hub3 shadowsocks (Random 30)
-vless://923509aa-bfb0-4758-a5a1-a6c2d0468169@172.66.45.18:443?encryption=none&security=tls&sni=ef87bb2b.meti-e9q.pages.dev&fp=chrome&type=ws&host=ef87bb2b.meti-e9q.pages.dev&path=%2Fck2vlelfdajoybac%3Fed%3D2560#@kingo_team
-vless://cf804de9-d65f-4b49-9990-ea611fdcbc10@evay-vpn.octacityroleplay.ir:1122?encryption=none&security=reality&sni=www.zhaket.com&fp=chrome&pbk=4iCkO1B_tdvJY7x_v9izvkoNDfdGIFiL2LQX2Nqv5RI&sid=4c7b0ea36fc7f0c4&type=xhttp&host=join-bede-evay_vpn.org&path=%2F%40Evay_vpn----%40Evay_vpn----%40Evay_vpn----%40Evay_vpn----%40Evay_vpn----%40Evay_vpn----%40Evay_vpn----%40Evay_vpn----%40Evay_vpn----%40Evay_vpn----%40Evay_vpn----%40Evay_vpn----%40Evay_vpn----%40Evay_vpn----%40Evay_vpn----%40Evay_vpn----%40Evay_vpn----%40Evay_vpn----%40Evay_vpn----%40Evay_vpn----%40Evay_vpn&mode=auto#@kingo_team
-trojan://POORIARED@172.67.134.185:443?security=tls&sni=reDfRee8.REDFree8.ir&fp=chrome&type=ws&path=%2FeyJqdW5rIjoiVUl6eXhLZkkwUTJ3ZzkiLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6W119%3Fed%3D2560#@kingo_team
-vless://54d25c64-2f13-47b6-968d-d689bf42b91b@www.speedtest.net:2053?encryption=none&security=tls&sni=dl1.microspacea.ir&alpn=h2%2Chttp%2F1.1&fp=chrome&type=xhttp&path=%2F%40Adamak_Von&mode=auto#@kingo_team
-vless://238ec685-7c8f-44dd-a6e4-906020d9b3ab@178.62.226.192:32200?encryption=none&security=none&type=grpc&authority=&serviceName=ZEDMODEON-ZEDMODEON-bia-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON&mode=gun#@kingo_team
 vless://f22d79bb-4eaf-45ee-b406-81ad3745dff1@143.244.197.90:40187?encryption=none&security=none&type=grpc&authority=&serviceName=ZEDMODEON-ZEDMODEON-bia-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON&mode=gun#@kingo_team
+vless://08e65da4-808a-44e3-86af-cbf5233ba83f@zula.ir:8080?encryption=none&security=none&type=httpupgrade&host=movivoolom.movementvip.ir&path=%2F#@kingo_team
+vless://109282ee-8e89-4879-8d94-cfefe654d625@135.125.143.200:443?encryption=none&security=none&type=xhttp&host=135.125.143.200&path=%2F%40MaxFree---%40MaxFree---%40MaxFree---%40MaxFree---%40MaxFree&mode=auto#@kingo_team
+vless://f028a8c0-6763-4558-aee3-2563db9d7825@108.162.192.220:443?encryption=none&security=tls&sni=freudd.info&type=ws&host=freudd.info&path=%2Fxxvclws#@kingo_team
+vless://61757901-3818-46c7-8482-683fa7f6ba10@103.90.75.252:3001?encryption=none&security=none&type=tcp&headerType=none#@kingo_team
+trojan://POORIARED@172.67.134.185:443?security=tls&sni=reDfRee8.REDFree8.ir&fp=chrome&type=ws&path=%2FeyJqdW5rIjoiVUl6eXhLZkkwUTJ3ZzkiLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6W119%3Fed#@kingo_team
+vless://238ec685-7c8f-44dd-a6e4-906020d9b3ab@178.62.226.192:32200?encryption=none&security=none&type=grpc&authority=&serviceName=ZEDMODEON-ZEDMODEON-bia-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON&mode=gun#@kingo_team
+vless://1a25f8ad-cad2-4e93-b5bf-34e42bcac02a@208.103.161.32:2053?encryption=none&security=tls&sni=sni.111000.dynv6.net&fp=chrome&type=ws&host=sni.111000.dynv6.net&path=%2F%3Fed%3D2560#@kingo_team
+vless://238ec685-7c8f-44dd-a6e4-906020d9b3ab@178.62.226.192:32200?encryption=none&security=none&type=grpc&authority=&serviceName=ZEDMODEON-ZEDMODEON-bia-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON&mode=gun#@kingo_team
+vless://54d25c64-2f13-47b6-968d-d689bf42b91b@www.speedtest.net:2053?encryption=none&security=tls&sni=dl1.microspacea.ir&alpn=h2%2Chttp%2F1.1&fp=chrome&type=xhttp&path=%2F%40Adamak_Von&mode=auto#@kingo_team
 vless://49b3e9b9-dedb-4abd-ac4d-05bc64e7edcb@46.224.141.141:2025?encryption=none&security=reality&sni=miro.com&fp=chrome&pbk=hGlEVjlgkbHz7APkZPO6ZV3WEtCJW3Wkdx7xOISyP3Y&sid=d9&spx=%2F&type=grpc&authority=&serviceName=Join---Arshiavpn12---Join---Arshiavpn12---Join---Arshiavpn12---Join---Arshiavpn12---Join---Arshiavpn12---Join---Arshiavpn12---Join---Arshiavpn12---Join---Arshiavpn12---Join---Arshiavpn12---Join---Arshiavpn12---Join---Arshiavpn12---Join---Arshiavpn12---Join---Arshiavpn12---Join---Arshiavpn12---Join---Arshiavpn12---Join---Arshiavpn12---Join---Arshiavpn12&mode=gun#@kingo_team
 vmess://ew0KICAidiI6ICIyIiwNCiAgInBzIjogIlx1RDgzQ1x1RERGQVx1RDgzQ1x1RERGOCBVbml0ZWQgU3RhdGVzIiwNCiAgImFkZCI6ICJoZ3Ryb2phbi56YWJjLm5ldCIsDQogICJwb3J0IjogIjIwODMiLA0KICAiaWQiOiAiZTYzOTVjMjAtNDU3MS00YjM0LWQ2YjEtNTVhNWQzNmU0OWVhIiwNCiAgImFpZCI6ICIwIiwNCiAgInNjeSI6ICJhdXRvIiwNCiAgIm5ldCI6ICJ3cyIsDQogICJ0eXBlIjogIm5vbmUiLA0KICAiaG9zdCI6ICJoZ3Ryb2phbi56YWJjLm5ldCIsDQogICJwYXRoIjogIi9lNjM5NWMyMCIsDQogICJ0bHMiOiAidGxzIiwNCiAgInNuaSI6ICIiLA0KICAiYWxwbiI6ICIiLA0KICAiZnAiOiAiIg0KfQ==
-vmess://ew0KICAidiI6ICIyIiwNCiAgInBzIjogIlx1RDgzQ1x1RERGMFx1RDgzQ1x1RERGNyBTb3V0aCBLb3JlYSIsDQogICJhZGQiOiAic2VvdWwwMy56Z2pvay5jb20iLA0KICAicG9ydCI6ICI0NDMiLA0KICAiaWQiOiAiNzJhMGRhYzQtOTY4OS00YTU3LWIxNjQtNWM2NWJmYTk0NzcyIiwNCiAgImFpZCI6ICIwIiwNCiAgInNjeSI6ICJhdXRvIiwNCiAgIm5ldCI6ICJ3cyIsDQogICJ0eXBlIjogIm5vbmUiLA0KICAiaG9zdCI6ICJzZW91bDAzLnpnam9rLmNvbSIsDQogICJwYXRoIjogIi8iLA0KICAidGxzIjogInRscyIsDQogICJzbmkiOiAic2VvdWwwMy56Z2pvay5jb20iLA0KICAiYWxwbiI6ICIiLA0KICAiZnAiOiAiIg0KfQ==
-vless://f028a8c0-6763-4558-aee3-2563db9d7825@108.162.192.220:443?encryption=none&security=tls&sni=freudd.info&type=ws&host=freudd.info&path=%2Fxxvclws#@kingo_team
-vless://109282ee-8e89-4879-8d94-cfefe654d625@135.125.143.200:443?encryption=none&security=none&type=xhttp&host=135.125.143.200&path=%2F%40MaxFree---%40MaxFree---%40MaxFree---%40MaxFree---%40MaxFree&mode=auto#@kingo_team
-vless://923509aa-bfb0-4758-a5a1-a6c2d0468169@172.66.45.18:443?encryption=none&security=tls&sni=ef87bb2b.meti-e9q.pages.dev&fp=chrome&type=ws&host=ef87bb2b.meti-e9q.pages.dev&path=%2Fck2vlelfdajoybac%3Fed%3D2560#@kingo_team
-vless://61757901-3818-46c7-8482-683fa7f6ba10@103.90.75.252:3001?encryption=none&security=none&type=tcp&headerType=none#@kingo_team
-vless://238ec685-7c8f-44dd-a6e4-906020d9b3ab@178.62.226.192:32200?encryption=none&security=none&type=grpc&authority=&serviceName=ZEDMODEON-ZEDMODEON-bia-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON&mode=gun#@kingo_team
+vless://cf804de9-d65f-4b49-9990-ea611fdcbc10@evay-vpn.octacityroleplay.ir:1122?encryption=none&security=reality&sni=www.zhaket.com&fp=chrome&pbk=4iCkO1B_tdvJY7x_v9izvkoNDfdGIFiL2LQX2Nqv5RI&sid=4c7b0ea36fc7f0c4&type=xhttp&host=join-bede-evay_vpn.org&path=%2F%40Evay_vpn----%40Evay_vpn----%40Evay_vpn----%40Evay_vpn----%40Evay_vpn----%40Evay_vpn----%40Evay_vpn----%40Evay_vpn----%40Evay_vpn----%40Evay_vpn----%40Evay_vpn----%40Evay_vpn----%40Evay_vpn----%40Evay_vpn----%40Evay_vpn----%40Evay_vpn----%40Evay_vpn----%40Evay_vpn----%40Evay_vpn----%40Evay_vpn----%40Evay_vpn&mode=auto#@kingo_team
 vless://88f41020-5b41-4051-9a18-c60fcf79a828@209.38.218.66:45417?encryption=none&security=none&type=grpc&authority=&serviceName=ZEDMODEON-ZEDMODEON-bia-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON&mode=gun#@kingo_team
-vless://08e65da4-808a-44e3-86af-cbf5233ba83f@zula.ir:8080?encryption=none&security=none&type=httpupgrade&host=movivoolom.movementvip.ir&path=%2F#@kingo_team
-vless://1a25f8ad-cad2-4e93-b5bf-34e42bcac02a@208.103.161.32:2053?encryption=none&security=tls&sni=sni.111000.dynv6.net&fp=chrome&type=ws&host=sni.111000.dynv6.net&path=%2F%3Fed%3D2560#@kingo_team
-trojan://POORIARED@172.67.134.185:443?security=tls&sni=reDfRee8.REDFree8.ir&fp=chrome&type=ws&path=%2FeyJqdW5rIjoiVUl6eXhLZkkwUTJ3ZzkiLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6W119%3Fed#@kingo_team
+vless://923509aa-bfb0-4758-a5a1-a6c2d0468169@172.66.45.18:443?encryption=none&security=tls&sni=ef87bb2b.meti-e9q.pages.dev&fp=chrome&type=ws&host=ef87bb2b.meti-e9q.pages.dev&path=%2Fck2vlelfdajoybac%3Fed%3D2560#@kingo_team
+trojan://POORIARED@172.67.134.185:443?security=tls&sni=reDfRee8.REDFree8.ir&fp=chrome&type=ws&path=%2FeyJqdW5rIjoiVUl6eXhLZkkwUTJ3ZzkiLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6W119%3Fed%3D2560#@kingo_team
+vless://923509aa-bfb0-4758-a5a1-a6c2d0468169@172.66.45.18:443?encryption=none&security=tls&sni=ef87bb2b.meti-e9q.pages.dev&fp=chrome&type=ws&host=ef87bb2b.meti-e9q.pages.dev&path=%2Fck2vlelfdajoybac%3Fed%3D2560#@kingo_team
+vmess://ew0KICAidiI6ICIyIiwNCiAgInBzIjogIlx1RDgzQ1x1RERGMFx1RDgzQ1x1RERGNyBTb3V0aCBLb3JlYSIsDQogICJhZGQiOiAic2VvdWwwMy56Z2pvay5jb20iLA0KICAicG9ydCI6ICI0NDMiLA0KICAiaWQiOiAiNzJhMGRhYzQtOTY4OS00YTU3LWIxNjQtNWM2NWJmYTk0NzcyIiwNCiAgImFpZCI6ICIwIiwNCiAgInNjeSI6ICJhdXRvIiwNCiAgIm5ldCI6ICJ3cyIsDQogICJ0eXBlIjogIm5vbmUiLA0KICAiaG9zdCI6ICJzZW91bDAzLnpnam9rLmNvbSIsDQogICJwYXRoIjogIi8iLA0KICAidGxzIjogInRscyIsDQogICJzbmkiOiAic2VvdWwwMy56Z2pvay5jb20iLA0KICAiYWxwbiI6ICIiLA0KICAiZnAiOiAiIg0KfQ==
 
 
 
 ## Source 5: kobabi - sub.txt (Random 30)
-vless://1b2c91ab-f6c9-42f8-b2c6-8de0ac133d63@zula.ir:443?encryption=none&security=tls&sni=terazhedi.info&fp=chrome&insecure=0&allowInsecure=0&type=ws&host=terazhedi.info&path=%2Fsghiyws#@kingo_team
-vless://2053d74c-2a3b-453b-b665-8e25142a7569@172.67.72.241:443?encryption=none&security=tls&sni=Shiny.REvilSeptembEr.WorkErs.dEv&fp=chrome&insecure=0&allowInsecure=0&type=ws&host=Shiny.REvilSeptembEr.WorkErs.dEv&path=%2Fassets#@kingo_team
-vless://3e7f67de-648e-4871-b51a-a225214d41ee@47.239.246.82:443?encryption=none&security=reality&sni=cdn.userway.org&fp=chrome&pbk=TRP10HqKUXEQ3O-cfsq93DycfBmbJe9KM36yvSa8Mmw&type=tcp&headerType=none#@kingo_team
+vless://481c5606-b586-44d7-bc2e-d8ef30d67f62@kz.accesspoints.cloakify.app:38339?encryption=none&security=reality&sni=dl.google.com&fp=chrome&pbk=o0MFuznHh_Wztg0FTAMhFXm3hjAqOJAJIIVNn-_A9WA&sid=e16883e511&type=tcp&headerType=none#@kingo_team
+vless://02e46039-200d-4ae4-ac90-b0d619f72034@173.245.59.91:443?encryption=none&security=tls&sni=redlabell.info&fp=chrome&insecure=0&allowInsecure=0&type=ws&host=redlabell.info&path=%2Faafeuws#@kingo_team
+vless://0c07016f-6238-4a17-a414-ab0ecd8a8b5e@npmjs.com:443?encryption=none&security=tls&sni=soft-wave-5d2a.kyng-ayaan.workers.dev&fp=random&insecure=0&allowInsecure=0&type=ws&host=soft-wave-5d2a.kyng-ayaan.workers.dev&path=%2F#@kingo_team
+vless://73a4456a-0442-4550-8b4f-c719871a4eeb@www.speedtest.net:443?encryption=none&security=tls&sni=011.electrOCELlCO-CF-011.WorKERS.dEV&fp=chrome&insecure=0&allowInsecure=0&type=ws&host=011.electrOCELlCO-CF-011.WorKERS.dEV&path=%2FeyJqdW5rIjoibWRiMjNWaUwxNHVWIiwicHJvdG9jb2wiOiJ2bCIsIm1vZGUiOiJwcm94eWlwIiwicGFuZWxJUHMiOlsiMjE3LjE0Mi4yMzYuOTMiXX0%3D#@kingo_team
+vless://7578f457-0f1f-416d-b136-f833f4544e24@newsletter.mydailynews.info:443?encryption=none&security=tls&sni=newsletter.mydailynews.info&fp=chrome&insecure=0&allowInsecure=0&type=ws&host=newsletter.mydailynews.info&path=%2Fray#@kingo_team
+vless://577e812a-11af-48e0-be53-22b563ff31a5@vip.arivganteng.biz.id:443?encryption=none&security=tls&sni=vip.arivganteng.biz.id&fp=chrome&insecure=0&allowInsecure=0&type=ws&host=vip.arivganteng.biz.id&path=%2F#@kingo_team
+vless://c931b432-cbab-47f4-ae30-917b17e5fb1f@208.67.105.196:443?encryption=none&flow=xtls-rprx-vision&security=reality&sni=www.tradingview.com&fp=chrome&pbk=ameppwaxPsbMnl1d5xQ4nbkdiRLRQL7XLsFDwOv2XAY&sid=ba2e91d5d7be&type=tcp&headerType=none#@kingo_team
+vless://fd4b0117-d752-46fd-9a94-21a21e360fdb@meg3.horiono3.xyz:443?encryption=none&flow=xtls-rprx-vision&security=reality&sni=io.ozone.ru&fp=qq&pbk=r5WB5FnSCt4eeBC1FJMfkWHbzsMuabo0Rc6wuAhlZUs&sid=cf4d&type=tcp&headerType=none#@kingo_team
+vless://eabbac8d-bc20-4893-82ba-798c7c63b41d@185.239.141.182:4425?encryption=none&flow=xtls-rprx-vision&security=reality&sni=google.com&fp=chrome&pbk=I8C10gt92B_XeMMSsCIaePHYu2O1IE5hz0x2VKS7tzo&sid=e8&type=tcp&headerType=none#@kingo_team
+vless://e615a5ba-fce3-4ffa-9c86-b0327a8a107a@94.131.110.93:443?encryption=none&security=tls&fp=chrome&insecure=0&allowInsecure=0&type=ws&path=%2Fhormoz#@kingo_team
+vless://bec44ac3-a662-4179-a9dd-2aa881706dde@employ.bitiboot.com:443?encryption=none&security=reality&sni=analytics.google.com&fp=chrome&pbk=Ajk0QudeMVQocN88OG14PpsxparFuRJlvqzXDlW-gyQ&sid=aba7bc9a&type=tcp&headerType=none#@kingo_team
+vless://914ad96a-fb9b-4c42-9696-4fd33f6a1f06@138.68.170.140:443?encryption=none&security=tls&sni=github.com&fp=chrome&insecure=0&allowInsecure=0&type=ws&host=github.com&path=%2Fwrvrwpws#@kingo_team
+hysteria2://94931862-1484-11f0-9ab7-f23c95b6f51d@98f4acfe-t4un40-tdini3-cdfn.la.shifen.uk:1743?sni=98f4acfe-t4un40-tdini3-cdfn.la.shifen.uk&insecure=0&allowInsecure=0#@kingo_team
+vless://6e95243c-544c-4770-b2cd-a5c5cc10211e@172.66.44.81:443?encryption=none&security=tls&sni=DIP.Amperes.Workers.DEV&fp=chrome&insecure=0&allowInsecure=0&type=ws&host=DIP.Amperes.Workers.DEV&path=%2Fassets#@kingo_team
+vless://78fc9ba9-9c68-4b49-891f-ea9e38bd3b56@141.98.199.222:9443?encryption=none&security=tls&sni=ak.suoni.nyc.mn&fp=random&insecure=0&allowInsecure=0&type=ws&host=ak.suoni.nyc.mn&path=%2Fproxyip%3Dsjc.o00o.ooo#@kingo_team
+hysteria2://Telegram--%25253E%252540Ln2Ray@gavazn.lnmarketplace.net:45000?sni=gavazn.55994421.xyz&insecure=0&allowInsecure=0&obfs=salamander&obfs-password=Telegram--%3E%40Ln2Ray#@kingo_team
+vless://54fdfb91-1d27-4c5a-8fb3-61e1b08b2a58@5.144.181.114:443?encryption=none&security=tls&sni=bp.suoni.nyc.mn&fp=random&insecure=0&allowInsecure=0&type=ws&host=bp.suoni.nyc.mn&path=%2Fproxyip%3DProxyIP.SG.CMLiussss.net#@kingo_team
 vless://e615a5ba-fce3-4ffa-9c86-b0327a8a107a@185.235.241.97:443?encryption=none&security=tls&fp=chrome&insecure=0&allowInsecure=0&type=ws&path=%2Fhormoz#@kingo_team
-vless://0c07016f-6238-4a17-a414-ab0ecd8a8b5e@npmjs.com:443?encryption=none&security=tls&sni=soft-wave-5d2a.kyng-ayaan.workers.dev&fp=random&insecure=0&allowInsecure=0&type=ws&host=soft-wave-5d2a.kyng-ayaan.workers.dev&path=%2F%3Fed%3D2560#@kingo_team
-vless://aebe5a70-0ca3-46ce-8208-8b5bab1346ce@mybb.com:443?encryption=none&security=tls&sni=rAyAn-007.nAsTaRaN.DpDnS.OrG&fp=chrome&insecure=0&allowInsecure=0&type=ws&host=rAyAn-007.nAsTaRaN.DpDnS.OrG&path=%2F%3Fed%3D2560#@kingo_team
-vless://94daa8ad-75ed-4dbf-a6de-d05036d98df5@108.162.192.75:443?encryption=none&security=tls&sni=vangoghh.info&fp=chrome&insecure=0&allowInsecure=0&type=ws&host=vangoghh.info&path=%2Ftixvuws#@kingo_team
-hysteria2://Yet-Another-Public-Config-1@206.71.158.37:35000?sni=YAPC-1.afshin.ir&insecure=0&allowInsecure=0&obfs=salamander&obfs-password=Yet-Another-Public-Config-1#@kingo_team
-vless://2b7ff221-0ea2-4474-ab4e-686e6a11dc65@85.192.40.46:2083?encryption=none&security=reality&sni=tgju.org&fp=firefox&pbk=p8D0V1jYr98lK4kU8FlBYfQ1kMO6zgIx5qI_p5dr_Bc&type=tcp&headerType=none#@kingo_team
-vless://ed7f3703-29d7-42ca-b8bd-a4b291422921@www.speedtest.net:443?encryption=none&security=tls&sni=spring-dream-2210.votapi4213.workers.dev&fp=chrome&insecure=0&allowInsecure=0&type=ws&host=spring-dream-2210.votapi4213.workers.dev&path=%2Ftr----EXPRESSVPN_420---Join----EXPRESSVPN_420---Join---EXPRESSVPN_420---Join----EXPRESSVPN_420---Join---EXPRESSVPN_420%2F%3Fed%3D2048#@kingo_team
-vless://00000000-0000-4000-8000-000000000000@62.60.156.158:8082?encryption=none&security=tls&sni=ennyfe.zipgd3vx91o.ddns-ip.net&fp=chrome&insecure=0&allowInsecure=0&type=ws&host=ennyfe.zipgd3vx91o.ddns-ip.net&path=%2F%40Marisa_kristi#@kingo_team
-vless://a346a6cc-5252-405f-a011-6115c19d869d@162.159.60.160:2053?encryption=none&security=tls&sni=yongge.xiaoli.xyz&fp=chrome&insecure=0&allowInsecure=0&type=ws&host=yongge.xiaoli.xyz&path=%2F#@kingo_team
-vless://00000000-0000-4000-8000-000000000000@124.243.132.106:23333?encryption=none&security=tls&sni=mikuyo.bpd67081tsq.ddns-ip.net&fp=chrome&insecure=0&allowInsecure=0&type=ws&host=mikuyo.bpd67081tsq.ddns-ip.net&path=%2F%40Marisa_kristi#@kingo_team
-vless://ef23616d-8a9d-4b22-b2f5-9bda864de179@104.21.64.250:2053?encryption=none&security=tls&sni=INDEX.Arcane509.Workers.DEV&fp=chrome&insecure=0&allowInsecure=0&type=ws&host=INDEX.Arcane509.Workers.DEV&path=%2Fassets%3Fed%3D2048#@kingo_team
-hysteria2://6286105c-fb6d-11ef-be96-f23c93136cb3@227fd503-t4ssg0-t5vo4i-4550.la.shifen.uk:1743?sni=227fd503-t4ssg0-t5vo4i-4550.la.shifen.uk&insecure=0&allowInsecure=0#@kingo_team
-vless://1679af35-6dd6-4c09-ae3b-18f239217f3e@45.83.21.4:443?encryption=none&security=tls&sni=rAyAn-007.pArViN.DpDnS.OrG&fp=chrome&insecure=0&allowInsecure=0&type=ws&host=rAyAn-007.pArViN.DpDnS.OrG&path=%2FTelegram%3A%40AZARBAYJAB1%3Fed%3D2560#@kingo_team
-vless://50f9e963-e75c-428f-9fab-62282c966841@159.65.28.74:443?encryption=none&security=tls&sni=github.com&fp=chrome&insecure=0&allowInsecure=0&type=ws&host=github.com&path=%2Fypgpabws#@kingo_team
-vless://29187857-4a1f-4d1e-88eb-0016771e0dbb@172.67.193.88:443?encryption=none&security=tls&sni=hemmat.iranmap.workers.dev&fp=chrome&insecure=0&allowInsecure=0&type=ws&host=hemmat.iranmap.workers.dev&path=%2Fvless.hubp.de#@kingo_team
-vless://6be84905-e85d-49f5-9dbf-d0517455f85d@45.90.236.5:45006?encryption=none&flow=xtls-rprx-vision&security=reality&sni=google.com&fp=chrome&pbk=odeg3o6NSJbdTwtXqd6QZvbkiX5COv1Q41a7ciVELio&sid=0f704e&type=tcp&headerType=none#@kingo_team
-vless://81fae892-37b3-47d5-d047-b44b3395fa38@f2.askkf.com:443?encryption=none&security=tls&sni=f2.askkf.com&fp=chrome&insecure=0&allowInsecure=0&type=ws&host=f2.askkf.com&path=%2F#@kingo_team
-vless://2b7ff221-0ea2-4474-ab4e-686e6a11dc65@77.221.155.210:2083?encryption=none&security=reality&sni=tgju.org&fp=firefox&pbk=p8D0V1jYr98lK4kU8FlBYfQ1kMO6zgIx5qI_p5dr_Bc&type=tcp&headerType=none#@kingo_team
-vless://45d44338-30d2-439c-b765-90cb16f581c9@whatismyipaddress.com:443?encryption=none&security=tls&sni=broad-lake-d615.hegegi9101.workers.dev&fp=chrome&insecure=0&allowInsecure=0&type=ws&host=broad-lake-d615.hegegi9101.workers.dev&path=%2F#@kingo_team
-vless://169221de-6408-4143-9e66-6f77de385e94@172.67.204.84:443?encryption=none&security=tls&sni=cassiusvpn-cassiusvpn-000.stat-4.workers.dev&fp=chrome&insecure=0&allowInsecure=0&type=ws&host=cassiusvpn-cassiusvpn-000.stat-4.workers.dev&path=%2F#@kingo_team
-vless://2b7ff221-0ea2-4474-ab4e-686e6a11dc65@85.192.60.50:2083?encryption=none&security=reality&sni=tgju.org&fp=firefox&pbk=p8D0V1jYr98lK4kU8FlBYfQ1kMO6zgIx5qI_p5dr_Bc&type=tcp&headerType=none#@kingo_team
-vless://fd7d3e61-288e-4d0f-b5dc-591dcdbc119f@158.62.198.132:443?encryption=none&flow=xtls-rprx-vision&security=reality&sni=apple.com&fp=chrome&pbk=BaTi5Wrua_Oo_CMJ-uQ6UWtDId9z9IhzoOvRe2qvBhQ&sid=63d80d5199a2bc&type=tcp&headerType=none#@kingo_team
-vless://f7b4be8f-9785-4dbc-98f9-91b816d9a6bd@95.164.6.156:443?encryption=none&security=tls&fp=chrome&insecure=0&allowInsecure=0&type=ws&path=%2Ffpurikws#@kingo_team
-vless://7e296434-2d17-48d3-928d-19eaa34aecb1@45.15.140.38:28495?encryption=none&security=reality&sni=dl.google.com&fp=chrome&pbk=KXMH8QzaRa66F6GxOR1CanBunO2uHdJvri2zCbar2RQ&sid=0ecc2c1392&type=tcp&headerType=none#@kingo_team
-vless://62a49d41-e231-4a6b-af26-cec86ef64001@172.67.205.138:443?encryption=none&security=tls&sni=1403.stopt7307.workers.dev&fp=chrome&insecure=0&allowInsecure=0&type=ws&host=1403.stopt7307.workers.dev&path=%2F#@kingo_team
-vless://d48ba610-6ef1-475b-9d33-be2a0db96f87@62.60.157.37:443?encryption=none&flow=xtls-rprx-vision&security=reality&sni=st.ozone.ru&fp=chrome&pbk=jVZNjr5dXzki9VxDHWg_zsiUjSrplC0mnZrG8tuP_2c&sid=149adb1c3cb9ed11&type=tcp&headerType=none#@kingo_team
-vless://7df49a25-5785-41e0-a6ae-2369d68bfea3@188.114.97.3:443?encryption=none&security=tls&sni=red-morning-7c21.daheg47484.workers.dev&fp=chrome&insecure=0&allowInsecure=0&type=ws&host=red-morning-7c21.daheg47484.workers.dev&path=%2F%3Fed%3D2560#@kingo_team
+vless://bf8ce0b2-71f3-4237-81eb-1dfeb66bd183@172.67.68.132:443?encryption=none&security=tls&sni=rAyAn-cOnFiG-pl-1.pAriSa.dPdNs.oRg&fp=chrome&insecure=0&allowInsecure=0&type=ws&host=rAyAn-cOnFiG-pl-1.pAriSa.dPdNs.oRg&path=%2Fws#@kingo_team
+vless://aebe5a70-0ca3-46ce-8208-8b5bab1346ce@104.24.30.89:443?encryption=none&security=tls&sni=rAyAn-007.nAsTaRaN.DpDnS.OrG&fp=chrome&insecure=0&allowInsecure=0&type=ws&host=rAyAn-007.nAsTaRaN.DpDnS.OrG&path=%2F%3Fed%3D2560#@kingo_team
+vless://6e95243c-544c-4770-b2cd-a5c5cc10211e@104.21.48.1:443?encryption=none&security=tls&sni=DIP.Amperes.Workers.DEV&fp=chrome&insecure=0&allowInsecure=0&type=ws&host=DIP.Amperes.Workers.DEV&path=%2Fassets#@kingo_team
+vless://c69ccf0c-02e4-4325-8687-3a622a9f9fcf@51.250.43.141:8443?encryption=none&security=reality&sni=ads.x5.ru&fp=chrome&pbk=e2X3eYakAbU2NCCldc2uRMJG00SBKv9Nzp8AcCRlMik&sid=c950&type=tcp&headerType=none#@kingo_team
+vless://1679af35-6dd6-4c09-ae3b-18f239217f3e@172.66.43.117:443?encryption=none&security=tls&sni=rAyAn-007.pArViN.DpDnS.OrG&fp=chrome&insecure=0&allowInsecure=0&type=ws&host=rAyAn-007.pArViN.DpDnS.OrG&path=%2F%3Fed%3D2560#@kingo_team
+vless://17b359d4-b2dd-46ad-a7ad-e530a062e759@tunnyl.ru:8443?encryption=none&flow=xtls-rprx-vision&security=reality&sni=google.com&fp=chrome&pbk=B7oEk3bsUoMrpkpIcTsCQnZour3qfbgUuhOk9aWWbFk&sid=b88841a3&type=tcp&headerType=none#@kingo_team
+vless://7578f457-0f1f-416d-b136-f833f4544e24@172.67.190.180:443?encryption=none&security=tls&sni=newsletter.mydailynews.info&fp=chrome&insecure=0&allowInsecure=0&type=ws&host=newsletter.mydailynews.info&path=%2Fray#@kingo_team
+hysteria2://Telegram--%25253E%252540Ln2Ray@206.71.158.23:45000?sni=gavazn.55994421.xyz&insecure=0&allowInsecure=0&obfs=salamander&obfs-password=Telegram--%3E%40Ln2Ray#@kingo_team
+hysteria2://17cdeb6c-f046-11ee-bdac-f23c93141fad@6adab57e-t53wg0-tdvgqe-2gok.la.shifen.uk:1743?sni=6adab57e-t53wg0-tdvgqe-2gok.la.shifen.uk&insecure=0&allowInsecure=0#@kingo_team
+vless://ac34d524-805e-4fef-ad32-0ebc41d27a43@185.231.205.109:443?encryption=none&security=tls&fp=chrome&insecure=0&allowInsecure=0&type=ws&path=%2Fzmmdcyws#@kingo_team
+vless://1679af35-6dd6-4c09-ae3b-18f239217f3e@45.83.21.49:443?encryption=none&security=tls&sni=rAyAn-007.pArViN.DpDnS.OrG&fp=chrome&insecure=0&allowInsecure=0&type=ws&host=rAyAn-007.pArViN.DpDnS.OrG&path=%2FTelegram%3A%40AZARBAYJAB1%3Fed%3D2560#@kingo_team
+vless://2053d74c-2a3b-453b-b665-8e25142a7569@creativecommons.org:443?encryption=none&security=tls&sni=shiny.revilseptember.workers.dev&fp=chrome&insecure=0&allowInsecure=0&type=ws&host=shiny.revilseptember.workers.dev&path=%2Fsocks5%3A%2F%2F8.222.249.27%3A1100#@kingo_team
 
 
 
