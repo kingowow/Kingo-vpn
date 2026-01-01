@@ -1,0 +1,77 @@
+name: Game VPN - Modular Decode & Check
+
+permissions:
+  contents: write
+
+on:
+  schedule:
+    - cron: '0 */5 * * *'
+  workflow_dispatch:
+
+jobs:
+  game-check:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+      with:
+        token: ${{ secrets.PAT_TOKEN }}
+        persist-credentials: false
+
+    - name: Install tools
+      run: |
+        sudo apt update
+        sudo apt install -y netcat-openbsd
+
+    - name: Prepare files
+      run: |
+        mkdir -p game
+        > game/raw.txt
+        > game/decoded.txt
+        > game/active_urls.txt
+
+    - name: Fetch sources
+      run: |
+        while read -r url; do
+          [[ -z "$url" || "$url" =~ ^# ]] && continue
+          echo "Fetching: $url"
+          curl -fsSL "$url" >> game/raw.txt || true
+          echo "" >> game/raw.txt
+        done < scripts/sources.txt
+
+    - name: Auto detect & decode
+      run: |
+        if grep -q "://" game/raw.txt; then
+          cat game/raw.txt >> game/decoded.txt
+        fi
+
+        # try base64 decode
+        base64 -d game/raw.txt 2>/dev/null | \
+          grep -E '^(vmess|vless|ss|trojan)://' >> game/decoded.txt || true
+
+        sort -u game/decoded.txt -o game/decoded.txt
+
+    - name: Check active servers
+      run: |
+        while read -r line; do
+          host=$(echo "$line" | sed -n 's/.*@\(.*\):\([0-9]*\).*/\1/p')
+          port=$(echo "$line" | sed -n 's/.*@\(.*\):\([0-9]*\).*/\2/p')
+
+          [[ -z "$host" || -z "$port" ]] && continue
+
+          timeout 3 nc -z "$host" "$port" && \
+            echo "$line #GAME_OK" >> game/active_urls.txt
+        done < game/decoded.txt
+
+    - name: Commit & push
+      env:
+        PAT_TOKEN: ${{ secrets.PAT_TOKEN }}
+      run: |
+        git config user.name "GitHub Actions"
+        git config user.email "actions@github.com"
+        git remote set-url origin https://x-access-token:${PAT_TOKEN}@github.com/kingowow/Kingo-vpn.git
+
+        git add game/
+        git diff --cached --quiet || \
+          (git commit -m "Update game active VPN list" && git push origin main)
