@@ -1,4 +1,4 @@
-name: Game VPN - Active URLs
+name: Game VPN - Collect URLs (No Test)
 
 permissions:
   contents: write
@@ -9,7 +9,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  game-vpn:
+  collect-vpn:
     runs-on: ubuntu-latest
 
     steps:
@@ -19,12 +19,7 @@ jobs:
         token: ${{ secrets.PAT_TOKEN }}
         persist-credentials: false
 
-    - name: Install requirements
-      run: |
-        sudo apt update
-        sudo apt install -y netcat-openbsd
-
-    - name: Fetch, decode and check servers
+    - name: Fetch and normalize configs
       run: |
         set +e
 
@@ -51,15 +46,7 @@ jobs:
 
         sort -u /tmp/urls.txt | while read -r line; do
           clean=$(echo "$line" | cut -d'#' -f1)
-
-          host=$(echo "$clean" | sed -n 's/.*@\(.*\):\([0-9]*\).*/\1/p')
-          port=$(echo "$clean" | sed -n 's/.*@\(.*\):\([0-9]*\).*/\2/p')
-
-          [[ -z "$host" || -z "$port" ]] && continue
-
-          if timeout 3 nc -z "$host" "$port"; then
-            echo "${clean}#@kingo_team" >> game/active_urls.txt
-          fi
+          echo "${clean}#@kingo_team" >> game/active_urls.txt
         done
 
     - name: Commit and push
@@ -72,4 +59,4 @@ jobs:
 
         git add game/active_urls.txt
         git diff --cached --quiet || \
-          (git commit -m "Update active game VPN configs" && git push origin main)
+          (git commit -m "Update game VPN configs (no test)" && git push origin main)
