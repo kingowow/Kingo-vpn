@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout repo
+    - name: Checkout repository
       uses: actions/checkout@v3
       with:
         token: ${{ secrets.PAT_TOKEN }}
@@ -26,8 +26,11 @@ jobs:
 
     - name: Fetch, decode and check servers
       run: |
+        set +e
+
         mkdir -p game
         > game/active_urls.txt
+        > /tmp/urls.txt
 
         while read -r src; do
           [[ -z "$src" || "$src" =~ ^# ]] && continue
@@ -36,11 +39,13 @@ jobs:
           data=$(curl -fsSL "$src" || true)
 
           # Plain URLs
-          echo "$data" | grep -E '^(ss|vmess|vless|trojan)://' >> /tmp/urls.txt
+          echo "$data" | \
+            grep -E '^(ss|vmess|vless|trojan)://' >> /tmp/urls.txt || true
 
           # Base64 URLs
-          echo "$data" | base64 -d 2>/dev/null | \
-            grep -E '^(ss|vmess|vless|trojan)://' >> /tmp/urls.txt
+          echo "$data" | \
+            base64 -d 2>/dev/null | \
+            grep -E '^(ss|vmess|vless|trojan)://' >> /tmp/urls.txt || true
 
         done < scripts/sources.txt
 
