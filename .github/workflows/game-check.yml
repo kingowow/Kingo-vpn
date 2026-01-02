@@ -5,7 +5,7 @@ permissions:
 
 on:
   schedule:
-    - cron: '0 */5 * * *'
+    - cron: '0 */5 * * *'   # هر 5 ساعت
   workflow_dispatch:
 
 jobs:
@@ -19,7 +19,7 @@ jobs:
         token: ${{ secrets.PAT_TOKEN }}
         persist-credentials: false
 
-    - name: Fetch and normalize configs (Telegram + Others)
+    - name: Fetch and normalize configs (plain + base64)
       run: |
         set +e
 
@@ -28,36 +28,15 @@ jobs:
         > /tmp/urls.txt
 
         # ==================================================
-        # 1) Telegram sources (HTML -> plain text -> extract)
+        # 1) Other sources (plain text or base64 subscriptions)
         # ==================================================
         while read -r src; do
           [[ -z "$src" || "$src" =~ ^# ]] && continue
-          [[ "$src" != tg:* ]] && continue
-
-          channel="${src#tg:}"
-          tg_url="https://t.me/s/${channel}"
-
-          echo "Telegram source: $channel"
-
-          curl -s "$tg_url" | \
-            sed 's/<br>/\n/g' | \
-            sed 's/<[^>]*>//g' | \
-            grep -oE '(ss|vmess|vless|trojan)://[^\s]+' | \
-            head -n 50 >> /tmp/urls.txt || true
-
-        done < scripts/sources.txt
-
-        # ==================================================
-        # 2) Other sources (plain text or base64 subscriptions)
-        # ==================================================
-        while read -r src; do
-          [[ -z "$src" || "$src" =~ ^# ]] && continue
-          [[ "$src" == tg:* ]] && continue
 
           echo "Source: $src"
           data=$(curl -fsSL "$src" || true)
 
-          # Plain (one config per line)
+          # Plain URLs (هر خط یک کانفیگ)
           echo "$data" | \
             grep -E '^(ss|vmess|vless|trojan)://' >> /tmp/urls.txt || true
 
@@ -69,7 +48,7 @@ jobs:
         done < scripts/sources.txt
 
         # ==================================================
-        # 3) Normalize output (keep full params, rename tag)
+        # 2) Normalize output (keep full params, rename tag)
         # ==================================================
         sort -u /tmp/urls.txt | while read -r line; do
           clean=$(echo "$line" | cut -d'#' -f1)
@@ -86,4 +65,4 @@ jobs:
 
         git add game/active_urls.txt
         git diff --cached --quiet || \
-          (git commit -m "Update game VPN configs (telegram + no test)" && git push origin main)
+          (git commit -m "Update game VPN configs (no test, plain/base64)" && git push origin main)
