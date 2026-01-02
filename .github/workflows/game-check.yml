@@ -27,26 +27,29 @@ jobs:
         > game/active_urls.txt
         > /tmp/urls.txt
 
-        # =========================
-        # 1) Telegram sources first
-        # =========================
+        # ==================================================
+        # 1) Telegram sources (HTML -> plain text -> extract)
+        # ==================================================
         while read -r src; do
           [[ -z "$src" || "$src" =~ ^# ]] && continue
           [[ "$src" != tg:* ]] && continue
 
-          tg_url="${src#tg:}"
-          echo "Telegram source: $tg_url"
+          channel="${src#tg:}"
+          tg_url="https://t.me/s/${channel}"
+
+          echo "Telegram source: $channel"
 
           curl -s "$tg_url" | \
             sed 's/<br>/\n/g' | \
-            grep -Eo '(ss|vmess|vless|trojan)://[^<[:space:]]+' | \
+            sed 's/<[^>]*>//g' | \
+            grep -oE '(ss|vmess|vless|trojan)://[^\s]+' | \
             head -n 50 >> /tmp/urls.txt || true
 
         done < scripts/sources.txt
 
-        # =========================
-        # 2) Other sources (base64/plain)
-        # =========================
+        # ==================================================
+        # 2) Other sources (plain text or base64 subscriptions)
+        # ==================================================
         while read -r src; do
           [[ -z "$src" || "$src" =~ ^# ]] && continue
           [[ "$src" == tg:* ]] && continue
@@ -54,20 +57,20 @@ jobs:
           echo "Source: $src"
           data=$(curl -fsSL "$src" || true)
 
-          # Plain URLs
+          # Plain (one config per line)
           echo "$data" | \
             grep -E '^(ss|vmess|vless|trojan)://' >> /tmp/urls.txt || true
 
-          # Base64 URLs
+          # Base64 subscription
           echo "$data" | \
             base64 -d 2>/dev/null | \
             grep -E '^(ss|vmess|vless|trojan)://' >> /tmp/urls.txt || true
 
         done < scripts/sources.txt
 
-        # =========================
-        # 3) Normalize & save
-        # =========================
+        # ==================================================
+        # 3) Normalize output (keep full params, rename tag)
+        # ==================================================
         sort -u /tmp/urls.txt | while read -r line; do
           clean=$(echo "$line" | cut -d'#' -f1)
           echo "${clean}#@kingo_team" >> game/active_urls.txt
