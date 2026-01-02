@@ -5,7 +5,7 @@ permissions:
 
 on:
   schedule:
-    - cron: '0 */5 * * *'   # every 5 hours
+    - cron: '0 */5 * * *'
   workflow_dispatch:
 
 jobs:
@@ -19,7 +19,7 @@ jobs:
         token: ${{ secrets.PAT_TOKEN }}
         persist-credentials: false
 
-    - name: Fetch and normalize configs
+    - name: Fetch and normalize configs (Telegram + Others)
       run: |
         set +e
 
@@ -27,10 +27,31 @@ jobs:
         > game/active_urls.txt
         > /tmp/urls.txt
 
+        # =========================
+        # 1) Telegram sources first
+        # =========================
         while read -r src; do
           [[ -z "$src" || "$src" =~ ^# ]] && continue
-          echo "Source: $src"
+          [[ "$src" != tg:* ]] && continue
 
+          tg_url="${src#tg:}"
+          echo "Telegram source: $tg_url"
+
+          curl -s "$tg_url" | \
+            sed 's/<br>/\n/g' | \
+            grep -Eo '(ss|vmess|vless|trojan)://[^<[:space:]]+' | \
+            head -n 50 >> /tmp/urls.txt || true
+
+        done < scripts/sources.txt
+
+        # =========================
+        # 2) Other sources (base64/plain)
+        # =========================
+        while read -r src; do
+          [[ -z "$src" || "$src" =~ ^# ]] && continue
+          [[ "$src" == tg:* ]] && continue
+
+          echo "Source: $src"
           data=$(curl -fsSL "$src" || true)
 
           # Plain URLs
@@ -44,6 +65,9 @@ jobs:
 
         done < scripts/sources.txt
 
+        # =========================
+        # 3) Normalize & save
+        # =========================
         sort -u /tmp/urls.txt | while read -r line; do
           clean=$(echo "$line" | cut -d'#' -f1)
           echo "${clean}#@kingo_team" >> game/active_urls.txt
@@ -59,4 +83,4 @@ jobs:
 
         git add game/active_urls.txt
         git diff --cached --quiet || \
-          (git commit -m "Update game VPN configs (no test)" && git push origin main)
+          (git commit -m "Update game VPN configs (telegram + no test)" && git push origin main)
