@@ -5,7 +5,7 @@ permissions:
 
 on:
   schedule:
-    - cron: '0 */5 * * *'  # Every 3 hours
+    - cron: '0 */5 * * *'
   workflow_dispatch:
 
 jobs:
@@ -24,25 +24,29 @@ jobs:
         echo "# Merged VPN Config - Updated on $(date -u)" > merged_config.txt
         echo "" >> merged_config.txt
 
-        echo "## Source 1: arshiacomplus - config_lite.txt (Random 30)" >> merged_config.txt
-        curl -s https://raw.githubusercontent.com/arshiacomplus/v2rayExtractor/refs/heads/main/hy2.html | shuf -n 30 | sed 's/#.*/#@teleking_vip/g' >> merged_config.txt
-        echo -e "\n\n" >> merged_config.txt
+        SOURCES="\
+        https://raw.githubusercontent.com/arshiacomplus/v2rayExtractor/refs/heads/main/hy2.html,\
+        https://raw.githubusercontent.com/4n0nymou3/multi-proxy-config-fetcher/refs/heads/main/configs/proxy_configs.txt,\
+        https://raw.githubusercontent.com/Argh94/V2RayAutoConfig/refs/heads/main/configs/Hysteria2.txt,\
+        https://raw.githubusercontent.com/darkvpnapp/CloudflarePlus/refs/heads/main/proxy,\
+        https://raw.githubusercontent.com/liketolivefree/kobabi/main/sub.txt"
 
-        echo "## Source 2: 4n0nymou3 - ss.txt (Random 30)" >> merged_config.txt
-        curl -s https://raw.githubusercontent.com/4n0nymou3/multi-proxy-config-fetcher/refs/heads/main/configs/proxy_configs.txt | shuf -n 30 | sed 's/#.*/#@teleking_vip/g' >> merged_config.txt
-        echo -e "\n\n" >> merged_config.txt
+        IFS=',' read -ra URLS <<< "$SOURCES"
 
-        echo "## Source 3: Argh94 - V2Hub5 shadowsocks (Random 30)" >> merged_config.txt
-        curl -s https://raw.githubusercontent.com/Argh94/V2RayAutoConfig/refs/heads/main/configs/Hysteria2.txt | shuf -n 30 | sed 's/#.*/#@teleking_vip/g' >> merged_config.txt
-        echo -e "\n\n" >> merged_config.txt
+        COUNT=1
 
-        echo "## Source 4: darkvpnapp - V2Hub3 shadowsocks (Random 30)" >> merged_config.txt
-        curl -s https://raw.githubusercontent.com/darkvpnapp/CloudflarePlus/refs/heads/main/proxy | shuf -n 30 | sed 's/#.*/#@teleking_vip/g' >> merged_config.txt
-        echo -e "\n\n" >> merged_config.txt
+        for URL in "${URLS[@]}"; do
+          echo "## Source $COUNT" >> merged_config.txt
 
-        echo "## Source 5: kobabi - sub.txt (Random 30)" >> merged_config.txt
-        curl -s https://raw.githubusercontent.com/liketolivefree/kobabi/main/sub.txt | shuf -n 30 | sed 's/#.*/#@teleking_vip/g' >> merged_config.txt
-        echo -e "\n\n" >> merged_config.txt
+          curl -s "$URL" \
+          | sed '/^\s*$/d' \
+          | sed 's/#.*/#@teleking_vip/g' \
+          >> merged_config.txt
+
+          echo -e "\n\n" >> merged_config.txt
+
+          COUNT=$((COUNT+1))
+        done
 
     - name: Commit and push changes
       env:
@@ -50,7 +54,12 @@ jobs:
       run: |
         git config user.name "GitHub Actions"
         git config user.email "actions@github.com"
+
         git remote set-url origin https://x-access-token:${PAT_TOKEN}@github.com/kingowow/Kingo-vpn.git
 
         git add merged_config.txt
-        git diff --cached --quiet || (git commit -m "Auto update merged_config.txt" && git push origin main)
+
+        git diff --cached --quiet || (
+          git commit -m "Auto update merged_config.txt"
+          git push origin main
+        )
