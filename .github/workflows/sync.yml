@@ -25,11 +25,10 @@ jobs:
         echo "" >> merged_config.txt
 
         SOURCES="\
-        https://raw.githubusercontent.com/arshiacomplus/v2rayExtractor/refs/heads/main/hy2.html,\
+        https://raw.githubusercontent.com/sakha1370/OpenRay/refs/heads/main/output_iran/iran_top100_checked.txt,\
         https://raw.githubusercontent.com/4n0nymou3/multi-proxy-config-fetcher/refs/heads/main/configs/proxy_configs.txt,\
-        https://raw.githubusercontent.com/Argh94/V2RayAutoConfig/refs/heads/main/configs/Hysteria2.txt,\
-        https://raw.githubusercontent.com/darkvpnapp/CloudflarePlus/refs/heads/main/proxy,\
-        https://raw.githubusercontent.com/liketolivefree/kobabi/main/sub.txt"
+        https://raw.githubusercontent.com/arshiacomplus/v2rayExtractor/refs/heads/main/hy2.html,\
+        https://raw.githubusercontent.com/Created-By/Telegram-Eag1e_YT/main/%40Eag1e_YT"
 
         IFS=',' read -ra URLS <<< "$SOURCES"
 
