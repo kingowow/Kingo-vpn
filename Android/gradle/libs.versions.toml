@@ -1,0 +1,16 @@
+[versions]
+agp = "8.6.0"
+core = "1.15.0"
+appcompat = "1.7.1"
+material = "1.13.0"
+constraintlayout = "2.2.1"
+
+[libraries]
+androidx-core = { module = "androidx.core:core", version.ref = "core" }
+androidx-appcompat = { module = "androidx.appcompat:appcompat", version.ref = "appcompat" }
+material = { module = "com.google.android.material:material", version.ref = "material" }
+androidx-constraintlayout = { module = "androidx.constraintlayout:constraintlayout", version.ref = "constraintlayout" }
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }
+android-library = { id = "com.android.library", version.ref = "agp" }
