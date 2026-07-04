@@ -1,0 +1,159 @@
+name: Kingo VPN Configs
+
+permissions:
+  contents: write
+
+on:
+  schedule:
+    - cron: '0 */5 * * *'
+  workflow_dispatch:
+
+jobs:
+  merge:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout with PAT
+      uses: actions/checkout@v3
+      with:
+        token: ${{ secrets.PAT_TOKEN }}
+        persist-credentials: false
+
+    - name: Download, process and merge configs
+      run: |
+        # Create output directory if it doesn't exist
+        mkdir -p server
+
+        # Initialize the output file with header
+        echo "# Merged VPN Config - Updated on $(date -u)" > server/KingoVpn1.txt
+        echo "" >> server/KingoVpn1.txt
+
+        # Define your sources here - you can easily add/remove/modify URLs
+        # Format: URL|TYPE (TYPE can be 'plain' or 'base64')
+        # If TYPE is omitted, defaults to 'plain'
+        SOURCES="
+        https://raw.githubusercontent.com/hello-world-1989/cn-news/main/end-gfw-together|Base64
+        https://raw.githubusercontent.com/ShatakVPN/ConfigForge-V2Ray/main/configs/trojan.txt|plain
+        "
+
+        # Counter for server naming
+        COUNT=1
+
+        # Process each source
+        while IFS= read -r line; do
+          # Skip empty lines and comments
+          [[ -z "${line}" ]] && continue
+          [[ "${line}" =~ ^[[:space:]]*# ]] && continue
+
+          # Parse URL and type
+          URL=$(echo "$line" | awk -F'|' '{print $1}' | xargs)
+          TYPE=$(echo "$line" | awk -F'|' '{print $2}' | xargs)
+          
+          # Default to plain if type not specified
+          [[ -z "$TYPE" ]] && TYPE="plain"
+
+          echo "## Source $COUNT (Type: $TYPE)" >> server/KingoVpn1.txt
+
+          if [ "$TYPE" = "base64" ]; then
+            # Download and decode base64 content
+            curl -s "$URL" | base64 -d 2>/dev/null \
+            | sed '/^\s*$/d' \
+            | sed 's/#.*//g' \
+            >> server/KingoVpn1.txt
+          else
+            # Download plain text content
+            curl -s "$URL" \
+            | sed '/^\s*$/d' \
+            | sed 's/#.*//g' \
+            >> server/KingoVpn1.txt
+          fi
+
+          echo -e "\n\n" >> server/KingoVpn1.txt
+
+          COUNT=$((COUNT+1))
+        done <<< "$SOURCES"
+
+    - name: Rename servers to Kingo ping N format
+      run: |
+        # Process the merged file to rename server names
+        # This handles various proxy formats: vless, vmess, trojan, ss, etc.
+        
+        # Create a temporary file
+        TMP_FILE=$(mktemp)
+        
+        # Counter for Kingo ping naming
+        KINGO_COUNT=1
+        
+        while IFS= read -r line; do
+          # Skip empty lines and comments
+          if [[ -z "$line" ]] || [[ "$line" =~ ^# ]]; then
+            echo "$line" >> "$TMP_FILE"
+            continue
+          fi
+
+          # Check if line contains a proxy config
+          if [[ "$line" =~ ^(vless|vmess|trojan|ss|ssr|hysteria|hy2|tuic|socks5|http):// ]]; then
+            # Extract protocol
+            PROTOCOL=$(echo "$line" | grep -oP '^[a-zA-Z0-9]+')
+            
+            # For vmess (JSON base64), we need special handling
+            if [ "$PROTOCOL" = "vmess" ]; then
+              # Extract the base64 part
+              BASE64_PART=$(echo "$line" | sed 's/vmess://')
+              
+              # Decode, modify ps field, re-encode
+              DECODED=$(echo "$BASE64_PART" | base64 -d 2>/dev/null)
+              
+              if [ -n "$DECODED" ]; then
+                # Replace ps field with Kingo ping N
+                MODIFIED=$(echo "$DECODED" | sed 's/"ps":"[^"]*"/"ps":"Kingo ping '$KINGO_COUNT'"/g')
+                
+                # If ps field doesn't exist, add it
+                if ! echo "$MODIFIED" | grep -q '"ps"'; then
+                  MODIFIED=$(echo "$MODIFIED" | sed 's/}$/,"ps":"Kingo ping '$KINGO_COUNT'"}/
+                fi
+                
+                ENCODED=$(echo "$MODIFIED" | base64 -w 0)
+                echo "vmess://${ENCODED}" >> "$TMP_FILE"
+              else
+                echo "$line" >> "$TMP_FILE"
+              fi
+            else
+              # For other protocols, try to replace the name/fragment after #
+              # Format: protocol://...#OriginalName -> protocol://...#Kingo ping N
+              
+              if echo "$line" | grep -q '#'; then
+                # Remove everything after # and add new name
+                CLEAN_LINE=$(echo "$line" | sed 's/#.*$//')
+                echo "${CLEAN_LINE}#Kingo ping ${KINGO_COUNT}" >> "$TMP_FILE"
+              else
+                # No existing name, append one
+                echo "${line}#Kingo ping ${KINGO_COUNT}" >> "$TMP_FILE"
+              fi
+            fi
+            
+            KINGO_COUNT=$((KINGO_COUNT+1))
+          else
+            # Non-config line, keep as is
+            echo "$line" >> "$TMP_FILE"
+          fi
+        done < server/KingoVpn1.txt
+        
+        # Replace original with modified
+        mv "$TMP_FILE" server/KingoVpn1.txt
+
+    - name: Commit and push changes
+      env:
+        PAT_TOKEN: ${{ secrets.PAT_TOKEN }}
+      run: |
+        git config user.name "GitHub Actions"
+        git config user.email "actions@github.com"
+
+        git remote set-url origin https://x-access-token:${PAT_TOKEN}@github.com/kingowow/Kingo-vpn.git
+
+        git add server/KingoVpn1.txt
+
+        git diff --cached --quiet || (
+          git commit -m "Auto update server/KingoVpn1.txt"
+          git push origin main
+        )
