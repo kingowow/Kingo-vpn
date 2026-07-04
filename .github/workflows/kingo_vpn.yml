@@ -22,12 +22,12 @@ jobs:
     - name: Download, process and merge configs
       run: |
         mkdir -p server
-        echo "# Merged VPN Config - Updated on $(date -u)" > server/KingoVpn1.txt
-        echo "" >> server/KingoVpn1.txt
+        echo "# Merged VPN Config - Updated on $(date -u)" > server/KingoVpn.txt
+        echo "" >> server/KingoVpn.txt
 
         SOURCES="
         https://raw.githubusercontent.com/hello-world-1989/cn-news/main/end-gfw-together|base64
-        https://raw.githubusercontent.com/ShatakVPN/ConfigForge-V2Ray/main/configs/trojan.txt|plain
+        https://raw.githubusercontent.com/V2RayRoot/V2RayConfig/refs/heads/main/Config/vless.txt|plain
         "
 
         COUNT=1
@@ -39,16 +39,16 @@ jobs:
           TYPE=$(echo "$line" | awk -F'|' '{print $2}' | sed 's/^[[:space:]]*//;s/[[:space:]]*$//')
           [ -z "$TYPE" ] && TYPE="plain"
 
-          echo "## Source $COUNT (Type: $TYPE)" >> server/KingoVpn1.txt
+          echo "## Source $COUNT (Type: $TYPE)" >> server/KingoVpn.txt
 
           if [ "$TYPE" = "base64" ]; then
-            curl -sL "$URL" | base64 -d 2>/dev/null | sed '/^[[:space:]]*$/d' | sed 's/#.*//g' >> server/KingoVpn1.txt || echo "# Warning: Failed to decode base64 from $URL" >> server/KingoVpn1.txt
+            curl -sL "$URL" | base64 -d 2>/dev/null | sed '/^[[:space:]]*$/d' | sed 's/#.*//g' >> server/KingoVpn.txt || echo "# Warning: Failed to decode base64 from $URL" >> server/KingoVpn.txt
           else
-            curl -sL "$URL" | sed '/^[[:space:]]*$/d' | sed 's/#.*//g' >> server/KingoVpn1.txt || echo "# Warning: Failed to download from $URL" >> server/KingoVpn1.txt
+            curl -sL "$URL" | sed '/^[[:space:]]*$/d' | sed 's/#.*//g' >> server/KingoVpn.txt || echo "# Warning: Failed to download from $URL" >> server/KingoVpn.txt
           fi
 
-          echo "" >> server/KingoVpn1.txt
-          echo "" >> server/KingoVpn1.txt
+          echo "" >> server/KingoVpn.txt
+          echo "" >> server/KingoVpn.txt
           COUNT=$((COUNT+1))
         done <<< "$SOURCES"
 
@@ -93,9 +93,9 @@ jobs:
           else
             echo "$line" >> "$TMP_FILE"
           fi
-        done < server/KingoVpn1.txt
+        done < server/KingoVpn.txt
 
-        mv "$TMP_FILE" server/KingoVpn1.txt
+        mv "$TMP_FILE" server/KingoVpn.txt
 
     - name: Commit and push changes
       env:
@@ -104,8 +104,8 @@ jobs:
         git config user.name "GitHub Actions"
         git config user.email "actions@github.com"
         git remote set-url origin https://x-access-token:${PAT_TOKEN}@github.com/${{ github.repository }}.git
-        git add server/KingoVpn1.txt
+        git add server/KingoVpn.txt
         git diff --cached --quiet || (
-          git commit -m "Auto update server/KingoVpn1.txt"
+          git commit -m "Auto update server/KingoVpn.txt"
           git push origin HEAD:${{ github.ref_name }}
         )
