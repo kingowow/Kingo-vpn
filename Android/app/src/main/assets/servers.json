@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Germany VLESS",
+    "config": "vless://your-uuid@de2.example.com:443?encryption=none&flow=xtls-rprx-vision&security=reality&sni=de2.example.com&fp=chrome&pbk=your-public-key&sid=your-short-id&type=tcp#Germany%20VLESS",
+    "protocol": "Vless",
+    "ping": -1,
+    "isFavorite": false,
+    "group": "servers"
+  },
+  {
+    "name": "Netherlands VLESS",
+    "config": "vless://your-uuid@nl1.example.com:443?encryption=none&security=tls&type=ws&path=/vless&fp=chrome&sni=nl1.example.com#Netherlands%20VLESS",
+    "protocol": "Vless",
+    "ping": -1,
+    "isFavorite": false,
+    "group": "servers"
+  },
+  {
+    "name": "US VMess",
+    "config": "{\"dns\":{\"hosts\":{\"domain:googleapis.cn\":\"googleapis.com\"},\"servers\":[\"1.1.1.1\"]},\"inbounds\":[{\"listen\":\"127.0.0.1\",\"port\":10808,\"protocol\":\"socks\",\"settings\":{\"auth\":\"noauth\",\"udp\":true,\"userLevel\":8},\"sniffing\":{\"destOverride\":[],\"enabled\":false},\"tag\":\"socks\"},{\"listen\":\"127.0.0.1\",\"port\":10809,\"protocol\":\"http\",\"settings\":{\"userLevel\":8},\"tag\":\"http\"}],\"log\":{\"loglevel\":\"error\"},\"outbounds\":[{\"protocol\":\"vmess\",\"settings\":{\"vnext\":[{\"address\":\"us1.example.com\",\"port\":443,\"users\":[{\"alterId\":0,\"id\":\"your-uuid-here\",\"security\":\"auto\"}]}]},\"streamSettings\":{\"network\":\"ws\",\"security\":\"tls\",\"tlsSettings\":{\"allowInsecure\":false},\"wsSettings\":{\"path\":\"/vmess\"}}}],\"routing\":{\"domainStrategy\":\"IPIfNonMatch\",\"rules\":[{\"ip\":[\"1.1.1.1\"],\"outboundTag\":\"proxy\",\"port\":\"53\",\"type\":\"field\"}]}}",
+    "protocol": "VMess",
+    "ping": -1,
+    "isFavorite": false,
+    "group": "servers"
+  }
+]
