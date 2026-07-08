@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="oval">
+    <solid android:color="@color/power_button_bg" />
+    <stroke
+        android:width="3dp"
+        android:color="@color/accent" />
+    <size
+        android:width="200dp"
+        android:height="200dp" />
+</shape>
