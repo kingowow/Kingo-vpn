@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/menu_add_server"
+        android:title="@string/add_server"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/menu_fetch_servers"
+        android:title="@string/fetch_servers"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/menu_test_ping_all"
+        android:title="@string/test_all_ping"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/menu_delete_all"
+        android:title="@string/delete_all"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/menu_sort_ping"
+        android:title="@string/sort_by_ping"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/menu_reorder"
+        android:title="@string/reorder_servers"
+        app:showAsAction="never" />
+
+</menu>
