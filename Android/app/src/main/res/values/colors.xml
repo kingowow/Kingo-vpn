@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary">#FF0D1B2A</color>
+    <color name="primary_dark">#FF000814</color>
+    <color name="accent">#FF00D4FF</color>
+    <color name="accent_dim">#FF00A8CC</color>
+    <color name="connected">#FF00E676</color>
+    <color name="disconnected">#FFFF5252</color>
+    <color name="connecting">#FFFFD740</color>
+    <color name="surface">#FF1B2838</color>
+    <color name="surface_light">#FF243447</color>
+    <color name="text_primary">#FFFFFFFF</color>
+    <color name="text_secondary">#FF8B949E</color>
+    <color name="text_hint">#FF4A5568</color>
+    <color name="server_selected">#FF0D47A1</color>
+    <color name="server_unselected">#FF1A2332</color>
+    <color name="divider">#FF2D3748</color>
+    <color name="power_button_bg">#FF1A1A2E</color>
+    <color name="progress_ring">#FF00D4FF</color>
+    <color name="glow_color">#3300D4FF</color>
+    <color name="ping_green">#FF00E676</color>
+    <color name="ping_yellow">#FFFFD740</color>
+    <color name="ping_red">#FFFF5252</color>
+    <color name="tab_selected">#FF00D4FF</color>
+    <color name="tab_unselected">#FF4A5568</color>
+    <color name="menu_bg">#FF1B2838</color>
+</resources>
