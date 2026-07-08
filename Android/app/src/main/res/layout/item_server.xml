@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="12dp"
+    android:layout_marginBottom="6dp"
+    android:layout_marginEnd="12dp"
+    android:padding="12dp"
+    android:orientation="horizontal"
+    android:background="@drawable/server_item_bg"
+    android:gravity="center_vertical"
+    android:foreground="?attr/selectableItemBackground">
+
+    <!-- Drag Handle (visible only in reorder mode) -->
+    <ImageView
+        android:id="@+id/ivDragHandle"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginEnd="4dp"
+        android:src="@drawable/ic_drag_handle"
+        android:importantForAccessibility="no"
+        android:visibility="gone" />
+
+    <!-- VPN Shield Icon -->
+    <FrameLayout
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:background="@drawable/circle_flag_bg">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_vpn_shield"
+            android:importantForAccessibility="no" />
+
+    </FrameLayout>
+
+    <!-- Server Info -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginStart="12dp"
+        android:orientation="vertical">
+
+        <!-- Server Name (from URI #remark) - Bold/Large -->
+        <TextView
+            android:id="@+id/tvServerName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_primary"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:maxLines="1"
+            android:ellipsize="end"
+            tools:text="erfanandroid" />
+
+        <!-- Protocol - Small -->
+        <TextView
+            android:id="@+id/tvProtocol"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:textColor="@color/text_secondary"
+            android:textSize="11sp"
+            tools:text="Vless server" />
+
+    </LinearLayout>
+
+    <!-- Ping Badge -->
+    <TextView
+        android:id="@+id/tvPing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="10dp"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        android:paddingEnd="10dp"
+        android:text="@string/ping_not_tested"
+        android:textColor="@color/text_hint"
+        android:textSize="12sp"
+        android:fontFamily="monospace"
+        android:background="@drawable/ping_badge_bg"
+        android:clickable="true"
+        android:focusable="true" />
+
+</LinearLayout>
