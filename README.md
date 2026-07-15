@@ -2,6 +2,10 @@
 # 🚀 Kingo VPN
 
 <p align="center">
+  <img src="screenshots/icon.png" width="300"/>
+</p>
+
+<p align="center">
   <img src="https://img.shields.io/github/stars/kingowow/Kingo-vpn?style=for-the-badge&logo=github" />
   <img src="https://img.shields.io/github/license/kingowow/Kingo-vpn?style=for-the-badge" />
   <img src="https://img.shields.io/github/v/release/kingowow/Kingo-vpn?style=for-the-badge" />
