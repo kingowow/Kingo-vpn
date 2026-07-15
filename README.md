@@ -2,7 +2,7 @@
 # 🚀 Kingo VPN
 
 <p align="center">
-  <img src="screenshots/icon.png" width="300"/>
+  <img src="screenshots/icon.png" width="120"/>
 </p>
 
 <p align="center">
