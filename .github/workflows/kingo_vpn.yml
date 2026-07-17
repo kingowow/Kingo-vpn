@@ -29,7 +29,6 @@ jobs:
         https://raw.githubusercontent.com/hello-world-1989/cn-news/main/end-gfw-together|base64
         https://raw.githubusercontent.com/V2RayRoot/V2RayConfig/refs/heads/main/Config/vless.txt|plain
         https://raw.githubusercontent.com/4n0nymou3/multi-proxy-config-fetcher/refs/heads/main/configs/proxy_configs_tested.txt|plain
-        https://raw.githubusercontent.com/V2RayRoot/V2RayConfig/refs/heads/main/Config/vless.txt|plain
         "
 
         COUNT=1
