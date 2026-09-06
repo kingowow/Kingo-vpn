@@ -43,9 +43,17 @@ jobs:
           echo "## Source $COUNT (Type: $TYPE)" >> server/KingoVpn.txt
 
           if [ "$TYPE" = "base64" ]; then
-            curl -sL "$URL" | base64 -d 2>/dev/null | sed '/^[[:space:]]*$/d' | sed 's/#.*//g' >> server/KingoVpn.txt || echo "# Warning: Failed to decode base64 from $URL" >> server/KingoVpn.txt
+            if curl -sL --fail "$URL" | base64 -d 2>/dev/null | sed '/^[[:space:]]*$/d' | sed 's/#.*//' >> server/KingoVpn.txt; then
+              :
+            else
+              echo "# Warning: Failed to download or decode base64 from $URL" >> server/KingoVpn.txt
+            fi
           else
-            curl -sL "$URL" | sed '/^[[:space:]]*$/d' | sed 's/#.*//g' >> server/KingoVpn.txt || echo "# Warning: Failed to download from $URL" >> server/KingoVpn.txt
+            if curl -sL --fail "$URL" | sed '/^[[:space:]]*$/d' | sed 's/#.*//' >> server/KingoVpn.txt; then
+              :
+            else
+              echo "# Warning: Failed to download from $URL" >> server/KingoVpn.txt
+            fi
           fi
 
           echo "" >> server/KingoVpn.txt
@@ -69,16 +77,19 @@ jobs:
 
             if [ "$PROTOCOL" = "vmess" ]; then
               BASE64_PART=$(echo "$line" | sed 's/^vmess:\/\///')
-              DECODED=$(echo "$BASE64_PART" | base64 -d 2>/dev/null)
 
-              if [ -n "$DECODED" ]; then
-                if echo "$DECODED" | grep -q '"ps"'; then
-                  MODIFIED=$(echo "$DECODED" | sed 's/"ps"[[:space:]]*:[[:space:]]*"[^"]*"/"ps":"Kingo ping '$KINGO_COUNT'"/g')
+              if DECODED=$(printf '%s' "$BASE64_PART" | base64 -d 2>/dev/null); then
+                if [ -n "$DECODED" ]; then
+                  if echo "$DECODED" | grep -q '"ps"'; then
+                    MODIFIED=$(echo "$DECODED" | sed 's/"ps"[[:space:]]*:[[:space:]]*"[^"]*"/"ps":"Kingo ping '"$KINGO_COUNT"'"/g')
+                  else
+                    MODIFIED=$(echo "$DECODED" | sed 's/}$/,"ps":"Kingo ping '"$KINGO_COUNT"'"}/')
+                  fi
+                  ENCODED=$(printf '%s' "$MODIFIED" | base64 -w 0 2>/dev/null || printf '%s' "$MODIFIED" | base64 | tr -d '\n')
+                  echo "vmess://${ENCODED}" >> "$TMP_FILE"
                 else
-                  MODIFIED=$(echo "$DECODED" | sed 's/}$/,"ps":"Kingo ping '$KINGO_COUNT'"}/')
+                  echo "${line}#Kingo ping ${KINGO_COUNT}" >> "$TMP_FILE"
                 fi
-                ENCODED=$(printf '%s' "$MODIFIED" | base64 -w 0 2>/dev/null || printf '%s' "$MODIFIED" | base64 | tr -d '\n')
-                echo "vmess://${ENCODED}" >> "$TMP_FILE"
               else
                 echo "${line}#Kingo ping ${KINGO_COUNT}" >> "$TMP_FILE"
               fi
