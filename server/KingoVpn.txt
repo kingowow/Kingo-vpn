@@ -1,8 +1,8 @@
-# Merged VPN Config - Updated on Thu Sep 10 03:16:35 UTC 2026
+# Merged VPN Config - Updated on Thu Sep 10 09:23:32 UTC 2026
 
 ## Source 1 (Type: base64)
-vless://1a17b19d-4896-4531-af79-6e91d8ef8228@13.214.30.47:8686?encryption=none&security=reality&type=tcp&sni=www.apple.com&pbk=A3NXnUIT-W0m1Y_leRnv5so2IeCvk9FCFgL31PulfTw&sid=628b3c90c98ead4f#Kingo ping 1
-vless://1a17b19d-4896-4531-af79-6e91d8ef8228@3.34.197.128:8686?encryption=none&security=reality&type=tcp&sni=www.apple.com&pbk=A3NXnUIT-W0m1Y_leRnv5so2IeCvk9FCFgL31PulfTw&sid=628b3c90c98ead4f#Kingo ping 2
+vless://1a17b19d-4896-4531-af79-6e91d8ef8228@13.212.16.243:8686?encryption=none&security=reality&type=tcp&sni=www.apple.com&pbk=A3NXnUIT-W0m1Y_leRnv5so2IeCvk9FCFgL31PulfTw&sid=628b3c90c98ead4f#Kingo ping 1
+vless://1a17b19d-4896-4531-af79-6e91d8ef8228@15.164.224.33:8686?encryption=none&security=reality&type=tcp&sni=www.apple.com&pbk=A3NXnUIT-W0m1Y_leRnv5so2IeCvk9FCFgL31PulfTw&sid=628b3c90c98ead4f#Kingo ping 2
 
 ## Source 2 (Type: plain)
 ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTprMWRCT21PQjRvcWk3VW1wMzdhMWJR@82.38.31.176:8080#Kingo ping 3
